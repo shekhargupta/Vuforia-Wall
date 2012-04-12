@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1549320B13B0D6D600AFB825 /* MultiTargetsAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1549320A13B0D6D600AFB825 /* MultiTargetsAppDelegate.mm */; };
+		156385CA1455ABF6004E26D0 /* FlakesBox.dat in Resources */ = {isa = PBXBuildFile; fileRef = 156385C81455ABF6004E26D0 /* FlakesBox.dat */; };
+		156385CB1455ABF6004E26D0 /* FlakesBox.xml in Resources */ = {isa = PBXBuildFile; fileRef = 156385C91455ABF6004E26D0 /* FlakesBox.xml */; };
+		15DDE9BF136981D200948807 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15DDE9BE136981D200948807 /* Texture.mm */; };
+		15E8F930136843A30091CB6F /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15E8F927136843A30091CB6F /* EAGLView.mm */; };
+		15E8F932136843A30091CB6F /* ShaderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15E8F92A136843A30091CB6F /* ShaderUtils.cpp */; };
+		15E8F9551368440F0091CB6F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E8F9541368440F0091CB6F /* CoreGraphics.framework */; };
+		15E8F957136844200091CB6F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E8F956136844200091CB6F /* CoreMedia.framework */; };
+		15E8F95B1368442C0091CB6F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E8F95A1368442C0091CB6F /* SystemConfiguration.framework */; };
+		15E8F95F136844410091CB6F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E8F95E136844410091CB6F /* AVFoundation.framework */; };
+		15E8F9631368444D0091CB6F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E8F9621368444D0091CB6F /* Security.framework */; };
+		15E8F9BA136844A20091CB6F /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E8F9B9136844A20091CB6F /* libQCAR.a */; };
+		15E8F9E4136846980091CB6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15E8F9E3136846980091CB6F /* main.m */; };
+		15E8FB0013687AE00091CB6F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E8FAFF13687AE00091CB6F /* CoreVideo.framework */; };
+		15E8FB5313687E2E0091CB6F /* TextureBowlAndSpoon.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E8FB5113687E2E0091CB6F /* TextureBowlAndSpoon.png */; };
+		15E8FB5413687E2E0091CB6F /* TextureWireframe.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E8FB5213687E2E0091CB6F /* TextureWireframe.png */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
+		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		76112CA3144720D1002D033F /* AR_EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76112C9A144720D0002D033F /* AR_EAGLView.mm */; };
+		76112CA4144720D1002D033F /* ARParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76112C9C144720D0002D033F /* ARParentViewController.m */; };
+		76112CA5144720D1002D033F /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76112C9E144720D1002D033F /* OverlayView.m */; };
+		76112CA6144720D1002D033F /* OverlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76112CA0144720D1002D033F /* OverlayViewController.mm */; };
+		76112CA7144720D1002D033F /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76112CA2144720D1002D033F /* QCARutils.mm */; };
+		762160E7144776CB0085E492 /* ARViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15E8F923136843A30091CB6F /* ARViewController.mm */; };
+		76D6751E14D068A9003D8330 /* icon_vuforia_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D6751D14D068A9003D8330 /* icon_vuforia_57x57.png */; };
+		76D6752014D068AD003D8330 /* icon_vuforia_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D6751F14D068AD003D8330 /* icon_vuforia_114x114.png */; };
+		76D6752214D068C4003D8330 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D6752114D068C4003D8330 /* Default.png */; };
+		76D6752414D068C7003D8330 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D6752314D068C7003D8330 /* Default@2x.png */; };
+		76D6752614D068CE003D8330 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D6752514D068CE003D8330 /* Default-Portrait~ipad.png */; };
+		76D6752814D068D2003D8330 /* icon_vuforia_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 76D6752714D068D2003D8330 /* icon_vuforia_72x72.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15379C6A13698113009AF106 /* BowlAndSpoonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BowlAndSpoonModel.h; path = MultiTargets/BowlAndSpoonModel.h; sourceTree = "<group>"; };
+		1549320A13B0D6D600AFB825 /* MultiTargetsAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MultiTargetsAppDelegate.mm; path = MultiTargets/MultiTargetsAppDelegate.mm; sourceTree = "<group>"; };
+		156385C81455ABF6004E26D0 /* FlakesBox.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlakesBox.dat; sourceTree = "<group>"; };
+		156385C91455ABF6004E26D0 /* FlakesBox.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FlakesBox.xml; sourceTree = "<group>"; };
+		15DDE9BE136981D200948807 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Texture.mm; path = ../ARCommon/Texture.mm; sourceTree = "<group>"; };
+		15E8F906136842CF0091CB6F /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = ../ARCommon/Shaders/Shader.fsh; sourceTree = "<group>"; };
+		15E8F907136842CF0091CB6F /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = ../ARCommon/Shaders/Shader.vsh; sourceTree = "<group>"; };
+		15E8F922136843A30091CB6F /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARViewController.h; path = ../ARCommon/ARViewController.h; sourceTree = "<group>"; };
+		15E8F923136843A30091CB6F /* ARViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARViewController.mm; path = ../ARCommon/ARViewController.mm; sourceTree = "<group>"; };
+		15E8F926136843A30091CB6F /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = MultiTargets/EAGLView.h; sourceTree = "<group>"; };
+		15E8F927136843A30091CB6F /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EAGLView.mm; path = MultiTargets/EAGLView.mm; sourceTree = "<group>"; };
+		15E8F928136843A30091CB6F /* MultiTargetsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiTargetsAppDelegate.h; path = MultiTargets/MultiTargetsAppDelegate.h; sourceTree = "<group>"; };
+		15E8F92A136843A30091CB6F /* ShaderUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderUtils.cpp; path = ../ARCommon/ShaderUtils.cpp; sourceTree = "<group>"; };
+		15E8F92B136843A30091CB6F /* ShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderUtils.h; path = ../ARCommon/ShaderUtils.h; sourceTree = "<group>"; };
+		15E8F92D136843A30091CB6F /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../ARCommon/Texture.h; sourceTree = "<group>"; };
+		15E8F9541368440F0091CB6F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		15E8F956136844200091CB6F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		15E8F95A1368442C0091CB6F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		15E8F95E136844410091CB6F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		15E8F9621368444D0091CB6F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		15E8F9B9136844A20091CB6F /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = "../../build/lib/arm/libQCAR.a"; sourceTree = SOURCE_ROOT; };
+		15E8F9E3136846980091CB6F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MultiTargets/main.m; sourceTree = "<group>"; };
+		15E8FAFF13687AE00091CB6F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		15E8FB5113687E2E0091CB6F /* TextureBowlAndSpoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureBowlAndSpoon.png; sourceTree = "<group>"; };
+		15E8FB5213687E2E0091CB6F /* TextureWireframe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureWireframe.png; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* MultiTargets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiTargets.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		32CA4F630368D1EE00C91783 /* MultiTargets_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiTargets_Prefix.pch; path = MultiTargets/MultiTargets_Prefix.pch; sourceTree = "<group>"; };
+		76112C99144720D0002D033F /* AR_EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AR_EAGLView.h; path = ../ARCommon/AR_EAGLView.h; sourceTree = "<group>"; };
+		76112C9A144720D0002D033F /* AR_EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AR_EAGLView.mm; path = ../ARCommon/AR_EAGLView.mm; sourceTree = "<group>"; };
+		76112C9B144720D0002D033F /* ARParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARParentViewController.h; path = ../ARCommon/ARParentViewController.h; sourceTree = "<group>"; };
+		76112C9C144720D0002D033F /* ARParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARParentViewController.m; path = ../ARCommon/ARParentViewController.m; sourceTree = "<group>"; };
+		76112C9D144720D0002D033F /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayView.h; path = ../ARCommon/OverlayView.h; sourceTree = "<group>"; };
+		76112C9E144720D1002D033F /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayView.m; path = ../ARCommon/OverlayView.m; sourceTree = "<group>"; };
+		76112C9F144720D1002D033F /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayViewController.h; path = ../ARCommon/OverlayViewController.h; sourceTree = "<group>"; };
+		76112CA0144720D1002D033F /* OverlayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OverlayViewController.mm; path = ../ARCommon/OverlayViewController.mm; sourceTree = "<group>"; };
+		76112CA1144720D1002D033F /* QCARutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QCARutils.h; path = ../ARCommon/QCARutils.h; sourceTree = "<group>"; };
+		76112CA2144720D1002D033F /* QCARutils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = QCARutils.mm; path = ../ARCommon/QCARutils.mm; sourceTree = "<group>"; };
+		76112CA91447211B002D033F /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cube.h; path = MultiTargets/Cube.h; sourceTree = "<group>"; };
+		76D6751D14D068A9003D8330 /* icon_vuforia_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_vuforia_57x57.png; sourceTree = "<group>"; };
+		76D6751F14D068AD003D8330 /* icon_vuforia_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_vuforia_114x114.png; sourceTree = "<group>"; };
+		76D6752114D068C4003D8330 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		76D6752314D068C7003D8330 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		76D6752514D068CE003D8330 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		76D6752714D068D2003D8330 /* icon_vuforia_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_vuforia_72x72.png; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* MultiTargets-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "MultiTargets-Info.plist"; path = "MultiTargets/MultiTargets-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
+				15E8F9551368440F0091CB6F /* CoreGraphics.framework in Frameworks */,
+				15E8F957136844200091CB6F /* CoreMedia.framework in Frameworks */,
+				15E8F95B1368442C0091CB6F /* SystemConfiguration.framework in Frameworks */,
+				15E8F95F136844410091CB6F /* AVFoundation.framework in Frameworks */,
+				15E8F9631368444D0091CB6F /* Security.framework in Frameworks */,
+				15E8F9BA136844A20091CB6F /* libQCAR.a in Frameworks */,
+				15E8FB0013687AE00091CB6F /* CoreVideo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15E8F90C136843220091CB6F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				156385C81455ABF6004E26D0 /* FlakesBox.dat */,
+				156385C91455ABF6004E26D0 /* FlakesBox.xml */,
+				15E8FB5113687E2E0091CB6F /* TextureBowlAndSpoon.png */,
+				15E8FB5213687E2E0091CB6F /* TextureWireframe.png */,
+			);
+			name = assets;
+			path = MultiTargets/assets;
+			sourceTree = "<group>";
+		};
+		15E8F9211368435A0091CB6F /* MultiTargets */ = {
+			isa = PBXGroup;
+			children = (
+				76F3A48914484ACA00180E08 /* ARCommon */,
+				15E8F926136843A30091CB6F /* EAGLView.h */,
+				15E8F927136843A30091CB6F /* EAGLView.mm */,
+				15E8F928136843A30091CB6F /* MultiTargetsAppDelegate.h */,
+				1549320A13B0D6D600AFB825 /* MultiTargetsAppDelegate.mm */,
+				76112CA8144720FA002D033F /* Model Data */,
+				29B97315FDCFA39411CA2CEA /* Supporting Files */,
+			);
+			name = MultiTargets;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* MultiTargets.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2514C27610084DB600A42282 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				15E8F906136842CF0091CB6F /* Shader.fsh */,
+				15E8F907136842CF0091CB6F /* Shader.vsh */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				76D6752714D068D2003D8330 /* icon_vuforia_72x72.png */,
+				76D6752514D068CE003D8330 /* Default-Portrait~ipad.png */,
+				76D6752314D068C7003D8330 /* Default@2x.png */,
+				76D6752114D068C4003D8330 /* Default.png */,
+				76D6751F14D068AD003D8330 /* icon_vuforia_114x114.png */,
+				76D6751D14D068A9003D8330 /* icon_vuforia_57x57.png */,
+				15E8F9211368435A0091CB6F /* MultiTargets */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* MultiTargets-Info.plist */,
+				15E8F9E3136846980091CB6F /* main.m */,
+				32CA4F630368D1EE00C91783 /* MultiTargets_Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15E8F90C136843220091CB6F /* assets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				15E8F9B9136844A20091CB6F /* libQCAR.a */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				28FD14FF0DC6FC520079059D /* OpenGLES.framework */,
+				28FD15070DC6FC5B0079059D /* QuartzCore.framework */,
+				15E8F9541368440F0091CB6F /* CoreGraphics.framework */,
+				15E8F956136844200091CB6F /* CoreMedia.framework */,
+				15E8F95A1368442C0091CB6F /* SystemConfiguration.framework */,
+				15E8F95E136844410091CB6F /* AVFoundation.framework */,
+				15E8F9621368444D0091CB6F /* Security.framework */,
+				15E8FAFF13687AE00091CB6F /* CoreVideo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76112CA8144720FA002D033F /* Model Data */ = {
+			isa = PBXGroup;
+			children = (
+				76112CA91447211B002D033F /* Cube.h */,
+				15379C6A13698113009AF106 /* BowlAndSpoonModel.h */,
+			);
+			name = "Model Data";
+			sourceTree = "<group>";
+		};
+		76F3A48914484ACA00180E08 /* ARCommon */ = {
+			isa = PBXGroup;
+			children = (
+				76112C99144720D0002D033F /* AR_EAGLView.h */,
+				76112C9A144720D0002D033F /* AR_EAGLView.mm */,
+				76112C9B144720D0002D033F /* ARParentViewController.h */,
+				76112C9C144720D0002D033F /* ARParentViewController.m */,
+				76112C9D144720D0002D033F /* OverlayView.h */,
+				76112C9E144720D1002D033F /* OverlayView.m */,
+				76112C9F144720D1002D033F /* OverlayViewController.h */,
+				76112CA0144720D1002D033F /* OverlayViewController.mm */,
+				76112CA1144720D1002D033F /* QCARutils.h */,
+				76112CA2144720D1002D033F /* QCARutils.mm */,
+				15E8F922136843A30091CB6F /* ARViewController.h */,
+				15E8F923136843A30091CB6F /* ARViewController.mm */,
+				15E8F92A136843A30091CB6F /* ShaderUtils.cpp */,
+				15E8F92B136843A30091CB6F /* ShaderUtils.h */,
+				15E8F92D136843A30091CB6F /* Texture.h */,
+				15DDE9BE136981D200948807 /* Texture.mm */,
+				2514C27610084DB600A42282 /* Shaders */,
+			);
+			name = ARCommon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* MultiTargets */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MultiTargets" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiTargets;
+			productName = MultiTargets;
+			productReference = 1D6058910D05DD3D006BFB54 /* MultiTargets.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MultiTargets" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* MultiTargets */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15E8FB5313687E2E0091CB6F /* TextureBowlAndSpoon.png in Resources */,
+				15E8FB5413687E2E0091CB6F /* TextureWireframe.png in Resources */,
+				156385CA1455ABF6004E26D0 /* FlakesBox.dat in Resources */,
+				156385CB1455ABF6004E26D0 /* FlakesBox.xml in Resources */,
+				76D6751E14D068A9003D8330 /* icon_vuforia_57x57.png in Resources */,
+				76D6752014D068AD003D8330 /* icon_vuforia_114x114.png in Resources */,
+				76D6752214D068C4003D8330 /* Default.png in Resources */,
+				76D6752414D068C7003D8330 /* Default@2x.png in Resources */,
+				76D6752614D068CE003D8330 /* Default-Portrait~ipad.png in Resources */,
+				76D6752814D068D2003D8330 /* icon_vuforia_72x72.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				762160E7144776CB0085E492 /* ARViewController.mm in Sources */,
+				15E8F930136843A30091CB6F /* EAGLView.mm in Sources */,
+				15E8F932136843A30091CB6F /* ShaderUtils.cpp in Sources */,
+				15E8F9E4136846980091CB6F /* main.m in Sources */,
+				15DDE9BF136981D200948807 /* Texture.mm in Sources */,
+				1549320B13B0D6D600AFB825 /* MultiTargetsAppDelegate.mm in Sources */,
+				76112CA3144720D1002D033F /* AR_EAGLView.mm in Sources */,
+				76112CA4144720D1002D033F /* ARParentViewController.m in Sources */,
+				76112CA5144720D1002D033F /* OverlayView.m in Sources */,
+				76112CA6144720D1002D033F /* OverlayViewController.mm in Sources */,
+				76112CA7144720D1002D033F /* QCARutils.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		15DDE9E01369828400948807 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		15DDE9E11369828400948807 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MultiTargets/MultiTargets_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = ../../build/include;
+				INFOPLIST_FILE = "MultiTargets/MultiTargets-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DUSE_OPENGL_ES_2_0=1",
+				);
+				PREBINDING = YES;
+				PRODUCT_NAME = MultiTargets;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MultiTargets/MultiTargets_Prefix.pch;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = ../../build/include;
+				INFOPLIST_FILE = "MultiTargets/MultiTargets-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DUSE_OPENGL_ES_2_0=1",
+				);
+				PREBINDING = YES;
+				PRODUCT_NAME = MultiTargets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MultiTargets/MultiTargets_Prefix.pch;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				HEADER_SEARCH_PATHS = ../../build/include;
+				INFOPLIST_FILE = "MultiTargets/MultiTargets-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"-DUSE_OPENGL_ES_2_0=1",
+				);
+				PREBINDING = YES;
+				PRODUCT_NAME = MultiTargets;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MultiTargets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				15DDE9E11369828400948807 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MultiTargets" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				15DDE9E01369828400948807 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
