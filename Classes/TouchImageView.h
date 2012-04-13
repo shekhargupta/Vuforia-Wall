@@ -18,12 +18,14 @@ static NSString* notificationTouchImageViewRemoved = @"TouchImageViewRemovedNoti
 	float rotationAngle;
 	
 	CGAffineTransform currentImageTransform;
+	CGRect currentBounds;
 }
 @property (nonatomic, assign) BOOL active;
 @property (nonatomic, assign) CGPoint translation;
 @property (nonatomic, assign) float scale;
 @property (nonatomic, assign) float rotationAngle;
 @property (nonatomic, assign) CGAffineTransform currentImageTransform;
+@property (nonatomic, assign) CGRect currentBounds;
 
 - (void)createGestureRecognizers;
 

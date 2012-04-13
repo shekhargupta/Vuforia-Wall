@@ -22,6 +22,7 @@
 @synthesize scale;
 @synthesize rotationAngle;
 @synthesize currentImageTransform;
+@synthesize currentBounds;
 
 
 
@@ -77,24 +78,27 @@
 
 - (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender;
 {
-    CGPoint translate = [sender translationInView:self];
-    CGAffineTransform gestureTransform = CGAffineTransformMakeTranslation(translate.x, translate.y);
+	CGPoint translate = [sender translationInView:self];
+	CGAffineTransform gestureTransform = CGAffineTransformMakeTranslation(translate.x, translate.y);
 	[self handleNewGestureTransform:gestureTransform withSender:sender];
-	
-	
 	
 	/*
 	if (sender.state == UIGestureRecognizerStateBegan) {
-		self.currentImageFrame = sender.view.frame;
-		CGAffineTransformMakeTranslation(translate.x, translate.y);
+		NSLog(@"PAN BEGIN");
+		self.currentBounds = sender.view.frame;
 	}
 	
-	CGPoint newTranslation = [sender translationInView:self];
-    CGAffineTransform gestureTransform = CGAffineTransformMakeTranslation(translate.x, translate.y);
-	CGAffineTransformTranslate(self.transform, translation.x, translation.y);
+	NSLog(@"PAN");
+    CGPoint translate = [sender translationInView:self];
+    
+	CGRect newFrame = self.currentBounds;
+    newFrame.origin.x += translate.x;
+    newFrame.origin.y += translate.y;
+    sender.view.frame = newFrame;
 	
-    if (sender.state == UIGestureRecognizerStateEnded) {
-        self.currentImageFrame = newFrame;
+	if (sender.state == UIGestureRecognizerStateEnded) {
+		NSLog(@"PAN END");
+		self.currentBounds = sender.view.frame;
 	}
 	*/
 }
@@ -125,7 +129,7 @@
 	CGFloat factor = [sender rotation] * 10.0 / 180.0 * 3.14;
     CGAffineTransform gestureTransform = CGAffineTransformMakeRotation( factor );
 	[self handleNewGestureTransform:gestureTransform withSender:sender];
-		
+	
 	/*
 	if (sender.state == UIGestureRecognizerStateBegan) {
 		self.currentImageTransform = self.transform;
