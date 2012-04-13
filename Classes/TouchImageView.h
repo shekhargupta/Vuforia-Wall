@@ -1,0 +1,31 @@
+//
+//  TouchImageView.h
+//  vuforia-wall
+//
+//  Created by Edo on 13.04.12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+static NSString* notificationTouchImageViewRemoved = @"TouchImageViewRemovedNotification";
+
+@interface TouchImageView : UIImageView
+{
+	BOOL active;
+	CGRect currentImageFrame;
+}
+@property (nonatomic, assign) BOOL active;
+@property (nonatomic, assign) CGRect currentImageFrame;
+
+- (void)createGestureRecognizers;
+
+- (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender; // Dragging
+- (IBAction)handlePinchGesture:(UIPinchGestureRecognizer *)sender; // Zooming
+- (IBAction)handleRotationGesture:(UIRotationGestureRecognizer *)sender; // Rotating
+- (IBAction)handleSingleDoubleTapGesture:(UIGestureRecognizer *)sender; // Single Double Tap
+- (IBAction)handleLongPressGesture:(UILongPressGestureRecognizer *)sender; // Single Double Tap
+
+
+
+@end

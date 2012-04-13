@@ -1,0 +1,378 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C4FEB7B15385FAB0073F13B /* tabFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEB7815385FAB0073F13B /* tabFolder.png */; };
+		5C4FEB7C15385FAB0073F13B /* tabPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEB7915385FAB0073F13B /* tabPortrait.png */; };
+		5C4FEB7D15385FAB0073F13B /* tabTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEB7A15385FAB0073F13B /* tabTarget.png */; };
+		5C4FEBCB153875200073F13B /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEBCA153875200073F13B /* target.png */; };
+		5C519A6C1537ECB00038E8E5 /* ImageWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A6B1537ECB00038E8E5 /* ImageWall.m */; };
+		5C519A7A15384F2B0038E8E5 /* ImageWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */; };
+		5C519A7B15384F2B0038E8E5 /* ImageWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */; };
+		5CD9D2BF1537AC9800588B56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9D2BD1537AC9800588B56 /* InfoPlist.strings */; };
+		5CD9D2C41537ACAC00588B56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2C21537ACAC00588B56 /* AppDelegate.m */; };
+		5CD9D2C51537ACAC00588B56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2C31537ACAC00588B56 /* main.m */; };
+		5CD9D2D01537AD6700588B56 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9D2CF1537AD6700588B56 /* README */; };
+		5CD9D2D51537AE9400588B56 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2D41537AE9400588B56 /* ImagePickerViewController.m */; };
+		5CD9D2D91537BAAE00588B56 /* TouchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2D81537BAAE00588B56 /* TouchImageView.m */; };
+		5CDC8AD51537ABAC0087B9EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDC8AD41537ABAC0087B9EC /* UIKit.framework */; };
+		5CDC8AD71537ABAC0087B9EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDC8AD61537ABAC0087B9EC /* Foundation.framework */; };
+		5CDC8AD91537ABAC0087B9EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDC8AD81537ABAC0087B9EC /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5C4FEB7815385FAB0073F13B /* tabFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabFolder.png; path = Ressources/Images/tabFolder.png; sourceTree = SOURCE_ROOT; };
+		5C4FEB7915385FAB0073F13B /* tabPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabPortrait.png; path = Ressources/Images/tabPortrait.png; sourceTree = SOURCE_ROOT; };
+		5C4FEB7A15385FAB0073F13B /* tabTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabTarget.png; path = Ressources/Images/tabTarget.png; sourceTree = SOURCE_ROOT; };
+		5C4FEBCA153875200073F13B /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = Ressources/Images/target.png; sourceTree = SOURCE_ROOT; };
+		5C519A6A1537ECB00038E8E5 /* ImageWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWall.h; sourceTree = "<group>"; };
+		5C519A6B1537ECB00038E8E5 /* ImageWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWall.m; sourceTree = "<group>"; };
+		5C519A7715384F2B0038E8E5 /* ImageWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageWallViewController.h; path = Classes/ImageWallViewController.h; sourceTree = SOURCE_ROOT; };
+		5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageWallViewController.m; path = Classes/ImageWallViewController.m; sourceTree = SOURCE_ROOT; };
+		5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageWallViewController.xib; path = Classes/ImageWallViewController.xib; sourceTree = SOURCE_ROOT; };
+		5CD9D2BE1537AC9800588B56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5CD9D2C11537ACAC00588B56 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
+		5CD9D2C21537ACAC00588B56 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../Classes/AppDelegate.m; sourceTree = "<group>"; };
+		5CD9D2C31537ACAC00588B56 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Classes/main.m; sourceTree = "<group>"; };
+		5CD9D2CF1537AD6700588B56 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		5CD9D2D31537AE9400588B56 /* ImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagePickerViewController.h; path = ../Classes/ImagePickerViewController.h; sourceTree = "<group>"; };
+		5CD9D2D41537AE9400588B56 /* ImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePickerViewController.m; path = ../Classes/ImagePickerViewController.m; sourceTree = "<group>"; };
+		5CD9D2D71537BAAE00588B56 /* TouchImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchImageView.h; path = Classes/TouchImageView.h; sourceTree = SOURCE_ROOT; };
+		5CD9D2D81537BAAE00588B56 /* TouchImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchImageView.m; path = Classes/TouchImageView.m; sourceTree = SOURCE_ROOT; };
+		5CD9D2DA1537BD2E00588B56 /* vuforia-wall-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "vuforia-wall-Info.plist"; sourceTree = "<group>"; };
+		5CD9D2DB1537BD2E00588B56 /* vuforia-wall-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vuforia-wall-Prefix.pch"; sourceTree = "<group>"; };
+		5CDC8AD01537ABAC0087B9EC /* vuforia-wall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vuforia-wall.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDC8AD41537ABAC0087B9EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5CDC8AD61537ABAC0087B9EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5CDC8AD81537ABAC0087B9EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CDC8ACD1537ABAC0087B9EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CDC8AD51537ABAC0087B9EC /* UIKit.framework in Frameworks */,
+				5CDC8AD71537ABAC0087B9EC /* Foundation.framework in Frameworks */,
+				5CDC8AD91537ABAC0087B9EC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C4FEB7715385F940073F13B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5C4FEB7815385FAB0073F13B /* tabFolder.png */,
+				5C4FEB7915385FAB0073F13B /* tabPortrait.png */,
+				5C4FEB7A15385FAB0073F13B /* tabTarget.png */,
+				5C4FEBCA153875200073F13B /* target.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		5CD9D2BC1537AC9800588B56 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9D2BD1537AC9800588B56 /* InfoPlist.strings */,
+			);
+			name = en.lproj;
+			path = Ressources/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CD9D2C01537ACAC00588B56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C519A6A1537ECB00038E8E5 /* ImageWall.h */,
+				5C519A6B1537ECB00038E8E5 /* ImageWall.m */,
+			);
+			name = Models;
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CD9D2CC1537AD1300588B56 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				5C4FEB7715385F940073F13B /* Images */,
+				5CD9D2BC1537AC9800588B56 /* en.lproj */,
+			);
+			name = Ressources;
+			sourceTree = "<group>";
+		};
+		5CD9D2D11537AD9700588B56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9D2D71537BAAE00588B56 /* TouchImageView.h */,
+				5CD9D2D81537BAAE00588B56 /* TouchImageView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5CD9D2D21537AD9B00588B56 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C519A7715384F2B0038E8E5 /* ImageWallViewController.h */,
+				5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */,
+				5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */,
+				5CD9D2D31537AE9400588B56 /* ImagePickerViewController.h */,
+				5CD9D2D41537AE9400588B56 /* ImagePickerViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5CD9D2D61537AE9700588B56 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5CDC8AC51537ABAC0087B9EC = {
+			isa = PBXGroup;
+			children = (
+				5CD9D2CF1537AD6700588B56 /* README */,
+				5CDC8ADA1537ABAC0087B9EC /* vuforia-wall */,
+				5CDC8AD31537ABAC0087B9EC /* Frameworks */,
+				5CDC8AD11537ABAC0087B9EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CDC8AD11537ABAC0087B9EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC8AD01537ABAC0087B9EC /* vuforia-wall.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CDC8AD31537ABAC0087B9EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CDC8AD41537ABAC0087B9EC /* UIKit.framework */,
+				5CDC8AD61537ABAC0087B9EC /* Foundation.framework */,
+				5CDC8AD81537ABAC0087B9EC /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CDC8ADA1537ABAC0087B9EC /* vuforia-wall */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9D2C11537ACAC00588B56 /* AppDelegate.h */,
+				5CD9D2C21537ACAC00588B56 /* AppDelegate.m */,
+				5CD9D2D61537AE9700588B56 /* Controllers */,
+				5CD9D2C01537ACAC00588B56 /* Models */,
+				5CD9D2D11537AD9700588B56 /* Views */,
+				5CD9D2D21537AD9B00588B56 /* ViewControllers */,
+				5CDC8ADB1537ABAC0087B9EC /* Other Sources */,
+				5CD9D2CC1537AD1300588B56 /* Ressources */,
+			);
+			path = "vuforia-wall";
+			sourceTree = "<group>";
+		};
+		5CDC8ADB1537ABAC0087B9EC /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9D2C31537ACAC00588B56 /* main.m */,
+				5CD9D2DA1537BD2E00588B56 /* vuforia-wall-Info.plist */,
+				5CD9D2DB1537BD2E00588B56 /* vuforia-wall-Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CDC8ACF1537ABAC0087B9EC /* vuforia-wall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CDC8AE81537ABAC0087B9EC /* Build configuration list for PBXNativeTarget "vuforia-wall" */;
+			buildPhases = (
+				5CDC8ACC1537ABAC0087B9EC /* Sources */,
+				5CDC8ACD1537ABAC0087B9EC /* Frameworks */,
+				5CDC8ACE1537ABAC0087B9EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vuforia-wall";
+			productName = "vuforia-wall";
+			productReference = 5CDC8AD01537ABAC0087B9EC /* vuforia-wall.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CDC8AC71537ABAC0087B9EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 5CDC8ACA1537ABAC0087B9EC /* Build configuration list for PBXProject "vuforia-wall" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5CDC8AC51537ABAC0087B9EC;
+			productRefGroup = 5CDC8AD11537ABAC0087B9EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CDC8ACF1537ABAC0087B9EC /* vuforia-wall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CDC8ACE1537ABAC0087B9EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD9D2BF1537AC9800588B56 /* InfoPlist.strings in Resources */,
+				5CD9D2D01537AD6700588B56 /* README in Resources */,
+				5C519A7B15384F2B0038E8E5 /* ImageWallViewController.xib in Resources */,
+				5C4FEB7B15385FAB0073F13B /* tabFolder.png in Resources */,
+				5C4FEB7C15385FAB0073F13B /* tabPortrait.png in Resources */,
+				5C4FEB7D15385FAB0073F13B /* tabTarget.png in Resources */,
+				5C4FEBCB153875200073F13B /* target.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CDC8ACC1537ABAC0087B9EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CD9D2C41537ACAC00588B56 /* AppDelegate.m in Sources */,
+				5CD9D2C51537ACAC00588B56 /* main.m in Sources */,
+				5CD9D2D51537AE9400588B56 /* ImagePickerViewController.m in Sources */,
+				5CD9D2D91537BAAE00588B56 /* TouchImageView.m in Sources */,
+				5C519A6C1537ECB00038E8E5 /* ImageWall.m in Sources */,
+				5C519A7A15384F2B0038E8E5 /* ImageWallViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5CD9D2BD1537AC9800588B56 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CD9D2BE1537AC9800588B56 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CDC8AE61537ABAC0087B9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eduard Feicho (EM7ERBSY6C)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2A26CDD6-7DF6-44EE-9578-352284E87E3C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CDC8AE71537ABAC0087B9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Eduard Feicho (EM7ERBSY6C)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2A26CDD6-7DF6-44EE-9578-352284E87E3C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CDC8AE91537ABAC0087B9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vuforia-wall/vuforia-wall-Prefix.pch";
+				INFOPLIST_FILE = "vuforia-wall/vuforia-wall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5CDC8AEA1537ABAC0087B9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "vuforia-wall/vuforia-wall-Prefix.pch";
+				INFOPLIST_FILE = "vuforia-wall/vuforia-wall-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CDC8ACA1537ABAC0087B9EC /* Build configuration list for PBXProject "vuforia-wall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CDC8AE61537ABAC0087B9EC /* Debug */,
+				5CDC8AE71537ABAC0087B9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CDC8AE81537ABAC0087B9EC /* Build configuration list for PBXNativeTarget "vuforia-wall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CDC8AE91537ABAC0087B9EC /* Debug */,
+				5CDC8AEA1537ABAC0087B9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CDC8AC71537ABAC0087B9EC /* Project object */;
+}
