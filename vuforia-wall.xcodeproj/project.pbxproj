@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C4FEB7B15385FAB0073F13B /* tabFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEB7815385FAB0073F13B /* tabFolder.png */; };
-		5C4FEB7C15385FAB0073F13B /* tabPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEB7915385FAB0073F13B /* tabPortrait.png */; };
-		5C4FEB7D15385FAB0073F13B /* tabTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEB7A15385FAB0073F13B /* tabTarget.png */; };
-		5C4FEBCB153875200073F13B /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C4FEBCA153875200073F13B /* target.png */; };
 		5C519A6C1537ECB00038E8E5 /* ImageWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A6B1537ECB00038E8E5 /* ImageWall.m */; };
 		5C519A7A15384F2B0038E8E5 /* ImageWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */; };
 		5C519A7B15384F2B0038E8E5 /* ImageWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */; };
-		5CD9D2BF1537AC9800588B56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9D2BD1537AC9800588B56 /* InfoPlist.strings */; };
+		5CD9A098153881F200A65501 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A091153881F200A65501 /* InfoPlist.strings */; };
+		5CD9A099153881F200A65501 /* tabFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A094153881F200A65501 /* tabFolder.png */; };
+		5CD9A09A153881F200A65501 /* tabPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A095153881F200A65501 /* tabPortrait.png */; };
+		5CD9A09B153881F200A65501 /* tabTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A096153881F200A65501 /* tabTarget.png */; };
+		5CD9A09C153881F200A65501 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A097153881F200A65501 /* target.png */; };
 		5CD9D2C41537ACAC00588B56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2C21537ACAC00588B56 /* AppDelegate.m */; };
 		5CD9D2C51537ACAC00588B56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2C31537ACAC00588B56 /* main.m */; };
 		5CD9D2D01537AD6700588B56 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9D2CF1537AD6700588B56 /* README */; };
@@ -26,16 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C4FEB7815385FAB0073F13B /* tabFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabFolder.png; path = Ressources/Images/tabFolder.png; sourceTree = SOURCE_ROOT; };
-		5C4FEB7915385FAB0073F13B /* tabPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabPortrait.png; path = Ressources/Images/tabPortrait.png; sourceTree = SOURCE_ROOT; };
-		5C4FEB7A15385FAB0073F13B /* tabTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabTarget.png; path = Ressources/Images/tabTarget.png; sourceTree = SOURCE_ROOT; };
-		5C4FEBCA153875200073F13B /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = target.png; path = Ressources/Images/target.png; sourceTree = SOURCE_ROOT; };
 		5C519A6A1537ECB00038E8E5 /* ImageWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWall.h; sourceTree = "<group>"; };
 		5C519A6B1537ECB00038E8E5 /* ImageWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWall.m; sourceTree = "<group>"; };
 		5C519A7715384F2B0038E8E5 /* ImageWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageWallViewController.h; path = Classes/ImageWallViewController.h; sourceTree = SOURCE_ROOT; };
 		5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageWallViewController.m; path = Classes/ImageWallViewController.m; sourceTree = SOURCE_ROOT; };
 		5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageWallViewController.xib; path = Classes/ImageWallViewController.xib; sourceTree = SOURCE_ROOT; };
-		5CD9D2BE1537AC9800588B56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5CD9A092153881F200A65501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		5CD9A094153881F200A65501 /* tabFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabFolder.png; sourceTree = "<group>"; };
+		5CD9A095153881F200A65501 /* tabPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabPortrait.png; sourceTree = "<group>"; };
+		5CD9A096153881F200A65501 /* tabTarget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabTarget.png; sourceTree = "<group>"; };
+		5CD9A097153881F200A65501 /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
 		5CD9D2C11537ACAC00588B56 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
 		5CD9D2C21537ACAC00588B56 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../Classes/AppDelegate.m; sourceTree = "<group>"; };
 		5CD9D2C31537ACAC00588B56 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../Classes/main.m; sourceTree = "<group>"; };
@@ -66,24 +66,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5C4FEB7715385F940073F13B /* Images */ = {
+		5CD9A090153881F200A65501 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				5C4FEB7815385FAB0073F13B /* tabFolder.png */,
-				5C4FEB7915385FAB0073F13B /* tabPortrait.png */,
-				5C4FEB7A15385FAB0073F13B /* tabTarget.png */,
-				5C4FEBCA153875200073F13B /* target.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
-		5CD9D2BC1537AC9800588B56 /* en.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				5CD9D2BD1537AC9800588B56 /* InfoPlist.strings */,
+				5CD9A091153881F200A65501 /* InfoPlist.strings */,
 			);
 			name = en.lproj;
-			path = Ressources/en.lproj;
+			path = Resources/en.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CD9A093153881F200A65501 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9A094153881F200A65501 /* tabFolder.png */,
+				5CD9A095153881F200A65501 /* tabPortrait.png */,
+				5CD9A096153881F200A65501 /* tabTarget.png */,
+				5CD9A097153881F200A65501 /* target.png */,
+			);
+			name = Images;
+			path = Resources/Images;
 			sourceTree = SOURCE_ROOT;
 		};
 		5CD9D2C01537ACAC00588B56 /* Models */ = {
@@ -96,13 +97,13 @@
 			path = Classes;
 			sourceTree = SOURCE_ROOT;
 		};
-		5CD9D2CC1537AD1300588B56 /* Ressources */ = {
+		5CD9D2CC1537AD1300588B56 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5C4FEB7715385F940073F13B /* Images */,
-				5CD9D2BC1537AC9800588B56 /* en.lproj */,
+				5CD9A090153881F200A65501 /* en.lproj */,
+				5CD9A093153881F200A65501 /* Images */,
 			);
-			name = Ressources;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		5CD9D2D11537AD9700588B56 /* Views */ = {
@@ -171,7 +172,7 @@
 				5CD9D2D11537AD9700588B56 /* Views */,
 				5CD9D2D21537AD9B00588B56 /* ViewControllers */,
 				5CDC8ADB1537ABAC0087B9EC /* Other Sources */,
-				5CD9D2CC1537AD1300588B56 /* Ressources */,
+				5CD9D2CC1537AD1300588B56 /* Resources */,
 			);
 			path = "vuforia-wall";
 			sourceTree = "<group>";
@@ -236,13 +237,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CD9D2BF1537AC9800588B56 /* InfoPlist.strings in Resources */,
 				5CD9D2D01537AD6700588B56 /* README in Resources */,
 				5C519A7B15384F2B0038E8E5 /* ImageWallViewController.xib in Resources */,
-				5C4FEB7B15385FAB0073F13B /* tabFolder.png in Resources */,
-				5C4FEB7C15385FAB0073F13B /* tabPortrait.png in Resources */,
-				5C4FEB7D15385FAB0073F13B /* tabTarget.png in Resources */,
-				5C4FEBCB153875200073F13B /* target.png in Resources */,
+				5CD9A098153881F200A65501 /* InfoPlist.strings in Resources */,
+				5CD9A099153881F200A65501 /* tabFolder.png in Resources */,
+				5CD9A09A153881F200A65501 /* tabPortrait.png in Resources */,
+				5CD9A09B153881F200A65501 /* tabTarget.png in Resources */,
+				5CD9A09C153881F200A65501 /* target.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +266,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5CD9D2BD1537AC9800588B56 /* InfoPlist.strings */ = {
+		5CD9A091153881F200A65501 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5CD9D2BE1537AC9800588B56 /* en */,
+				5CD9A092153881F200A65501 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

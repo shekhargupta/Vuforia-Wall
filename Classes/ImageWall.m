@@ -14,6 +14,7 @@
 @interface ImageWall()
 
 - (void)actionImagePicked:(NSNotification*)notification;
+- (void)actionImageRemoved:(NSNotification*)notification;
 
 @end
 
@@ -40,8 +41,8 @@
 		if (!singleton) {
 			singleton = [[ImageWall alloc] init];
 			singleton.images = [[NSMutableArray alloc] initWithObjects:nil];
-			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionImagePicked:) name:notificationImagePickerFinished object:nil];
-			[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionImageRemoved:) name:notificationTouchImageViewRemoved object:nil];
+			[[NSNotificationCenter defaultCenter] addObserver:singleton selector:@selector(actionImagePicked:) name:notificationImagePickerFinished object:nil];
+			[[NSNotificationCenter defaultCenter] addObserver:singleton selector:@selector(actionImageRemoved:) name:notificationTouchImageViewRemoved object:nil];
 		}
 		return singleton;
 	}

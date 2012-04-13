@@ -13,10 +13,17 @@ static NSString* notificationTouchImageViewRemoved = @"TouchImageViewRemovedNoti
 @interface TouchImageView : UIImageView
 {
 	BOOL active;
-	CGRect currentImageFrame;
+	CGPoint translation;
+	float scale;
+	float rotationAngle;
+	
+	CGAffineTransform currentImageTransform;
 }
 @property (nonatomic, assign) BOOL active;
-@property (nonatomic, assign) CGRect currentImageFrame;
+@property (nonatomic, assign) CGPoint translation;
+@property (nonatomic, assign) float scale;
+@property (nonatomic, assign) float rotationAngle;
+@property (nonatomic, assign) CGAffineTransform currentImageTransform;
 
 - (void)createGestureRecognizers;
 

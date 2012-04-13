@@ -23,6 +23,8 @@
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 	
+	
+	
 	UIViewController *vc1, *vc2, *vc3;
 	
 	// TODO
@@ -37,6 +39,13 @@
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,nil];
 	self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+	
+	ImageWall* imageWall = [ImageWall sharedInstance];
+	imageWall.frame = [[UIScreen mainScreen] bounds];
+	
+	NSLog(@"UIScreen mainScreen bounds: %@ %@ %@ %@\n", imageWall.frame.origin.x, imageWall.frame.origin.y, imageWall.frame.size.width, imageWall.frame.size.height);
+	
+	
     return YES;
 }
 

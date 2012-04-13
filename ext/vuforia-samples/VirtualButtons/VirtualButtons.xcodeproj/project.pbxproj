@@ -14,7 +14,6 @@
 		158A0C6F1355D1D4008B5D90 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158A0C6E1355D1D4008B5D90 /* QuartzCore.framework */; };
 		158A0C711355D1D4008B5D90 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158A0C701355D1D4008B5D90 /* OpenGLES.framework */; };
 		158A0C7A1355D1D4008B5D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A0C791355D1D4008B5D90 /* main.m */; };
-		158A0CCF1355DA4F008B5D90 /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 158A0CCE1355DA4F008B5D90 /* libQCAR.a */; };
 		158A0CD11355DA75008B5D90 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158A0CD01355DA75008B5D90 /* Security.framework */; };
 		158A0CD51355DAF8008B5D90 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158A0CD41355DAF8008B5D90 /* CoreVideo.framework */; };
 		158A0CD71355DB17008B5D90 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158A0CD61355DB16008B5D90 /* AVFoundation.framework */; };
@@ -26,6 +25,7 @@
 		159668051355E6080010786A /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 159668021355E6080010786A /* TextureTeapotRed.png */; };
 		159668061355E6080010786A /* TextureTeapotYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 159668031355E6080010786A /* TextureTeapotYellow.png */; };
 		15982348135F0B24005D176B /* EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15982347135F0B24005D176B /* EAGLView.mm */; };
+		5CDC8ABF15379DE50087B9EC /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDC8ABE15379DE50087B9EC /* libQCAR.a */; };
 		7654D4F614D070B3009B694A /* icon_vuforia_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 7654D4F514D070B3009B694A /* icon_vuforia_57x57.png */; };
 		7654D4F814D070B8009B694A /* icon_vuforia_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 7654D4F714D070B8009B694A /* icon_vuforia_114x114.png */; };
 		7654D4FA14D070C4009B694A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 7654D4F914D070C4009B694A /* Default.png */; };
@@ -60,7 +60,6 @@
 		158A0C7B1355D1D4008B5D90 /* VirtualButtonsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualButtonsAppDelegate.h; sourceTree = "<group>"; };
 		158A0C851355D1D4008B5D90 /* EAGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
 		158A0C9C1355D687008B5D90 /* Teapot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Teapot.h; sourceTree = "<group>"; };
-		158A0CCE1355DA4F008B5D90 /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../../build/lib/arm/libQCAR.a; sourceTree = SOURCE_ROOT; };
 		158A0CD01355DA75008B5D90 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		158A0CD21355DA86008B5D90 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		158A0CD41355DAF8008B5D90 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -73,6 +72,7 @@
 		159668021355E6080010786A /* TextureTeapotRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotRed.png; sourceTree = "<group>"; };
 		159668031355E6080010786A /* TextureTeapotYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotYellow.png; sourceTree = "<group>"; };
 		15982347135F0B24005D176B /* EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EAGLView.mm; sourceTree = "<group>"; };
+		5CDC8ABE15379DE50087B9EC /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = "../../../../../Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/arm/libQCAR.a"; sourceTree = "<group>"; };
 		7654D4F514D070B3009B694A /* icon_vuforia_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_vuforia_57x57.png; sourceTree = "<group>"; };
 		7654D4F714D070B8009B694A /* icon_vuforia_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_vuforia_114x114.png; sourceTree = "<group>"; };
 		7654D4F914D070C4009B694A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -117,12 +117,12 @@
 				158A0CD71355DB17008B5D90 /* AVFoundation.framework in Frameworks */,
 				158A0CD51355DAF8008B5D90 /* CoreVideo.framework in Frameworks */,
 				158A0CD11355DA75008B5D90 /* Security.framework in Frameworks */,
-				158A0CCF1355DA4F008B5D90 /* libQCAR.a in Frameworks */,
 				158A0C691355D1D4008B5D90 /* UIKit.framework in Frameworks */,
 				158A0C6B1355D1D4008B5D90 /* Foundation.framework in Frameworks */,
 				158A0C6D1355D1D4008B5D90 /* CoreGraphics.framework in Frameworks */,
 				158A0C6F1355D1D4008B5D90 /* QuartzCore.framework in Frameworks */,
 				158A0C711355D1D4008B5D90 /* OpenGLES.framework in Frameworks */,
+				5CDC8ABF15379DE50087B9EC /* libQCAR.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 				158A0CD41355DAF8008B5D90 /* CoreVideo.framework */,
 				158A0CD21355DA86008B5D90 /* AVFoundation.framework */,
 				158A0CD01355DA75008B5D90 /* Security.framework */,
-				158A0CCE1355DA4F008B5D90 /* libQCAR.a */,
+				5CDC8ABE15379DE50087B9EC /* libQCAR.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -373,7 +373,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VirtualButtons/VirtualButtons-Prefix.pch";
@@ -381,9 +381,11 @@
 				HEADER_SEARCH_PATHS = ../../build/include;
 				INFOPLIST_FILE = "VirtualButtons/VirtualButtons-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = (
+					../../build/lib/arm,
+					"\"$(SRCROOT)/../../../../../Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/arm\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -395,7 +397,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -413,7 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -431,7 +433,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -441,7 +443,10 @@
 				HEADER_SEARCH_PATHS = ../../build/include;
 				INFOPLIST_FILE = "VirtualButtons/VirtualButtons-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = (
+					../../build/lib/arm,
+					"\"$(SRCROOT)/../../../../../Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/arm\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,7 +459,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VirtualButtons/VirtualButtons-Prefix.pch";
@@ -462,7 +467,10 @@
 				HEADER_SEARCH_PATHS = ../../build/include;
 				INFOPLIST_FILE = "VirtualButtons/VirtualButtons-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = (
+					../../build/lib/arm,
+					"\"$(SRCROOT)/../../../../../Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/arm\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
