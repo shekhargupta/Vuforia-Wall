@@ -31,12 +31,11 @@
 	// if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {}
 	vc1 = [[ImagePickerViewController alloc] init];
 	vc2 = [[ImageWallViewController alloc] init];
-	// TODO
-	//vc3 = ...;
+	vc3 = [[QCARViewController alloc] init];
 	
 	self.tabBarController = [[UITabBarController alloc] init];
 	self.tabBarController.delegate = self;
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,nil];
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,vc3,nil];
 	self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 	
@@ -44,7 +43,6 @@
 	imageWall.frame = [[UIScreen mainScreen] bounds];
 	
 	NSLog(@"UIScreen mainScreen bounds: %@ %@ %@ %@\n", imageWall.frame.origin.x, imageWall.frame.origin.y, imageWall.frame.size.width, imageWall.frame.size.height);
-	
 	
     return YES;
 }

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ImageWallViewController.h"
-
+#import "QCARViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>
 
