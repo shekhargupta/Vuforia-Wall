@@ -7,6 +7,8 @@
 //
 
 #import "Plane3D.h"
+#include "Texture.h"
+
 
 @implementation Plane3D
 
@@ -65,13 +67,28 @@ static unsigned short planeIndices[PLANE3D_NUM_INDICES] =
     return self;
 }
 
-
 - (void)scaleWidth:(float)width andHeight:(float)height;
 {
 	for (int i=0; i<PLANE3D_NUM_VERTICES; i++) {
 		planeVertices[i*3]   = planeVertices[i*3] * width;
 		planeVertices[i*3+1] = planeVertices[i*3+1] * height;
 	}
+}
+
+- (void)setTextureWithImage:(UIImage*)image;
+{
+	GLuint nID;
+	Texture *theTexture = [[Texture alloc] init];
+	[theTexture loadImageDirect:image];
+	
+	glGenTextures(1, &nID);
+	[theTexture setTextureID: nID];
+	glBindTexture(GL_TEXTURE_2D, nID);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, [theTexture width], [theTexture height], 0, GL_RGBA, GL_UNSIGNED_BYTE, (GLvoid*)[theTexture pngData]);
+	
+	self.texture = theTexture;
 }
 
 @end

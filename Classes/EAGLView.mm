@@ -19,6 +19,8 @@
 
 
 #import "Plane3D.h"
+#import "ImageWall.h"
+#import "TouchImageView.h"
 
 namespace {
     // Teapot texture filenames
@@ -42,6 +44,8 @@ namespace {
     
 	if (self)
     {
+		NSLog(@"EAGLView initWithFrame");
+		
         // create list of textures we want loading - ARViewController will do this for us
         int nTextures = sizeof(textureFilenames) / sizeof(textureFilenames[0]);
         for (int i = 0; i < nTextures; ++i) {
@@ -59,8 +63,10 @@ namespace {
     // but using the same underlying 3D model of a teapot, differentiated
     // by using a different texture for each
     
+	NSLog(@"EAGLView setup3dObjects");
 	
-    for (int i=1; i < [textures count]; i++)
+	NSLog(@" ImageWall count %d", [ImageWall sharedInstance].images.count);
+    for (int i=0; i < [ImageWall sharedInstance].images.count; i++)
     {
 		/*
         Object3D *obj3D = [[Object3D alloc] init];
@@ -74,7 +80,9 @@ namespace {
         obj3D.indices = teapotIndices;
         */
 		Plane3D *obj3D = [[Plane3D alloc] init];
-        obj3D.texture = [textures objectAtIndex:i];
+		TouchImageView* imageView = [[ImageWall sharedInstance].images objectAtIndex:i];
+		[obj3D setTextureWithImage:imageView.image];
+//        obj3D.texture = [textures objectAtIndex:i];
 
         [objects3D addObject:obj3D];
 //ARCfix        [obj3D release];
@@ -157,7 +165,7 @@ namespace {
             // Draw object
 			
 			
-            glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+            glBindTexture(GL_TEXTURE_2D, obj3D.texture.textureID);
             glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
             glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
             glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
@@ -211,9 +219,14 @@ namespace {
             glEnableVertexAttribArray(textureCoordHandle);
             
 //            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+			Texture* tex = obj3D.texture;
+			NSLog(@"OBJ : %@\n",obj3D);
+			NSLog(@"Texture : %@\n",tex);
+			NSLog(@"TextureID : %d\n",tex.textureID);
+            glBindTexture(GL_TEXTURE_2D, tex.textureID);
+			NSLog(@"YEAH");
 			
-			glBindTexture(GL_TEXTURE_2D, textureID);
+//			glBindTexture(GL_TEXTURE_2D, textureID);
 			
             glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
             glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);

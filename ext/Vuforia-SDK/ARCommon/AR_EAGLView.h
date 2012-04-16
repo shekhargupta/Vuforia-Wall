@@ -25,7 +25,7 @@
     const unsigned short *indices;
     
 	// ARCfix
-    __unsafe_unretained Texture *texture;
+    Texture *texture;
 }
 
 @property (nonatomic) unsigned int numVertices;
@@ -36,7 +36,7 @@
 @property (nonatomic) unsigned int numIndices;
 @property (nonatomic) const unsigned short *indices;
 
-@property (nonatomic, assign) Texture *texture;
+@property (nonatomic) Texture *texture;
 
 @end
 

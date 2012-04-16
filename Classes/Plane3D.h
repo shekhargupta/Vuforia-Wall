@@ -11,6 +11,7 @@
 @interface Plane3D : Object3D
 
 - (void)scaleWidth:(float)width andHeight:(float)height;
+- (void)setTextureWithImage:(UIImage*)image;
 
 
 @end
