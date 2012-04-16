@@ -135,7 +135,10 @@ namespace {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     
-    for (int i = 0; i < state.getNumActiveTrackables(); ++i) {
+	if (state.getNumActiveTrackables() > 0) {
+//    for (int i = 0; i < state.getNumActiveTrackables(); ++i) {
+		int i = 0;
+		
         // Get the trackable
         const QCAR::Trackable* trackable = state.getActiveTrackable(i);
         QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(trackable->getPose());
@@ -147,7 +150,8 @@ namespace {
         else if (!strcmp(trackable->getName(), "tarmac"))
             targetIndex = 2;
         
-        Object3D *obj3D = [objects3D objectAtIndex:targetIndex];
+		for (int j=0; j<objects3D.count; j++) {
+			Object3D *obj3D = [objects3D objectAtIndex:j];
         
         // Render using the appropriate version of OpenGL
         if (QCAR::GL_11 & qUtils.QCARFlags) {
@@ -170,34 +174,6 @@ namespace {
             glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
             glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
             glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
-			
-			
-			/*
-			 
-			 GLfloat vertices[] = {
-			 -1.0, 1.0,
-			 1.0, 1.0,
-			 -1.0, -1.0,
-			 1.0, -1.0, }; 
-			 
-			 GLfloat normals[] =  {
-			 0.0, 0.0, 1.0,
-			 0.0, 0.0, 1.0,
-			 0.0, 0.0, 1.0,
-			 0.0, 0.0, 1.0 }; 
-			 
-			 GLfloat textureCoords[] = {
-			 0.0, 0.0,
-			 1.0, 0.0,
-			 0.0, 1.0,
-			 1.0, 1.0 };
-			 
-			glBindTexture(GL_TEXTURE_2D, texture);
-			glVertexPointer(2, GL_FLOAT, 0, vertices);
-			glNormalPointer(GL_FLOAT, 0, normals);
-			glTexCoordPointer(2, GL_FLOAT, 0, textureCoords);
-			glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
-			 */
         }
 #ifndef USE_OPENGL1
         else {
@@ -217,24 +193,19 @@ namespace {
             glEnableVertexAttribArray(vertexHandle);
             glEnableVertexAttribArray(normalHandle);
             glEnableVertexAttribArray(textureCoordHandle);
-            
-//            glActiveTexture(GL_TEXTURE0);
-			Texture* tex = obj3D.texture;
-			NSLog(@"OBJ : %@\n",obj3D);
-			NSLog(@"Texture : %@\n",tex);
-			NSLog(@"TextureID : %d\n",tex.textureID);
-            glBindTexture(GL_TEXTURE_2D, tex.textureID);
-			NSLog(@"YEAH");
+    
 			
-//			glBindTexture(GL_TEXTURE_2D, textureID);
-			
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
             glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
             glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
-            
-            ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
+			
+			ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
         }
 #endif
     }
+	}
+	
     
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
