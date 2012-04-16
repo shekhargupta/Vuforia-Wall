@@ -67,8 +67,6 @@ static BOOL firstTime = YES;
 }
 
 
-
-
 // test to see if the screen has hi-res mode
 - (BOOL) isRetinaEnabled
 {
@@ -76,8 +74,6 @@ static BOOL firstTime = YES;
             &&
             ([UIScreen mainScreen].scale == 2.0));
 }
-
-
 
 // Setup a continuation of the splash screen until the camera is initialised
 - (void) setupSplashContinuation
@@ -110,6 +106,5 @@ static BOOL firstTime = YES;
 		firstTime = NO;
     }
 }
-
 
 @end

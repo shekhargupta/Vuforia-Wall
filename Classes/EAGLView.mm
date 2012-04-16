@@ -17,16 +17,20 @@
 #import "ShaderUtils.h"
 #endif
 
+
+#import "Plane3D.h"
+
 namespace {
     // Teapot texture filenames
     const char* textureFilenames[] = {
-        "TextureTeapotBrass.png",
+		"target.png",
+//        "TextureTeapotBrass.png",
         "TextureTeapotBlue.png",
         "TextureTeapotRed.png"
     };
 
     // Model scale factor
-    const float kObjectScale = 3.0f;
+    const float kObjectScale = 100.0f;
 }
 
 
@@ -40,23 +44,27 @@ namespace {
     {
         // create list of textures we want loading - ARViewController will do this for us
         int nTextures = sizeof(textureFilenames) / sizeof(textureFilenames[0]);
-        for (int i = 0; i < nTextures; ++i)
+        for (int i = 0; i < nTextures; ++i) {
             [textureList addObject: [NSString stringWithUTF8String:textureFilenames[i]]];
+		}
+		
     }
     return self;
 }
 
-- (void) setup3dObjects
+- (void)setup3dObjects
 {
     // build the array of objects we want drawn and their texture
     // in this example we have 3 targets and require 3 models
     // but using the same underlying 3D model of a teapot, differentiated
     // by using a different texture for each
     
-    for (int i=0; i < [textures count]; i++)
+	
+    for (int i=1; i < [textures count]; i++)
     {
+		/*
         Object3D *obj3D = [[Object3D alloc] init];
-
+		
         obj3D.numVertices = NUM_TEAPOT_OBJECT_VERTEX;
         obj3D.vertices = teapotVertices;
         obj3D.normals = teapotNormals;
@@ -64,7 +72,8 @@ namespace {
         
         obj3D.numIndices = NUM_TEAPOT_OBJECT_INDEX;
         obj3D.indices = teapotIndices;
-        
+        */
+		Plane3D *obj3D = [[Plane3D alloc] init];
         obj3D.texture = [textures objectAtIndex:i];
 
         [objects3D addObject:obj3D];
@@ -141,22 +150,53 @@ namespace {
             // Load the model-view matrix
             glMatrixMode(GL_MODELVIEW);
             glLoadMatrixf(modelViewMatrix.data);
-            glTranslatef(0.0f, 0.0f, -kObjectScale);
+			
+//            glTranslatef(0.0f, 0.0f, -kObjectScale);
             glScalef(kObjectScale, kObjectScale, kObjectScale);
             
             // Draw object
+			
+			
             glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
             glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
             glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
             glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
             glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
+			
+			
+			/*
+			 
+			 GLfloat vertices[] = {
+			 -1.0, 1.0,
+			 1.0, 1.0,
+			 -1.0, -1.0,
+			 1.0, -1.0, }; 
+			 
+			 GLfloat normals[] =  {
+			 0.0, 0.0, 1.0,
+			 0.0, 0.0, 1.0,
+			 0.0, 0.0, 1.0,
+			 0.0, 0.0, 1.0 }; 
+			 
+			 GLfloat textureCoords[] = {
+			 0.0, 0.0,
+			 1.0, 0.0,
+			 0.0, 1.0,
+			 1.0, 1.0 };
+			 
+			glBindTexture(GL_TEXTURE_2D, texture);
+			glVertexPointer(2, GL_FLOAT, 0, vertices);
+			glNormalPointer(GL_FLOAT, 0, normals);
+			glTexCoordPointer(2, GL_FLOAT, 0, textureCoords);
+			glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
+			 */
         }
 #ifndef USE_OPENGL1
         else {
             // OpenGL 2
             QCAR::Matrix44F modelViewProjection;
             
-            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale, &modelViewMatrix.data[0]);
+//            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale, &modelViewMatrix.data[0]);
             ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
             ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
             
@@ -170,8 +210,11 @@ namespace {
             glEnableVertexAttribArray(normalHandle);
             glEnableVertexAttribArray(textureCoordHandle);
             
-            glActiveTexture(GL_TEXTURE0);
+//            glActiveTexture(GL_TEXTURE0);
             glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+			
+			glBindTexture(GL_TEXTURE_2D, textureID);
+			
             glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
             glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
             

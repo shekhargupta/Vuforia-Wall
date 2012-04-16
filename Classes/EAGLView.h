@@ -11,6 +11,8 @@
 // the EAGL surface has an alpha channel.
 @interface EAGLView : AR_EAGLView
 {
+	GLuint textureID;
+	GLubyte* imageData;
 }
 
 @end

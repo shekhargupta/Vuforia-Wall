@@ -52,6 +52,33 @@
         CFDataRef imageData = CGDataProviderCopyData(CGImageGetDataProvider(cgImage));
         
         // Copy the image data for use by Open GL
+        ret = [self copyImageDataForOpenGL:imageData];
+        CFRelease(imageData);
+    }
+    
+    return ret;
+}
+
+
+- (BOOL)loadImageDirect:(UIImage*)uiImage;
+{
+    BOOL ret = NO;
+    
+    if (uiImage) {
+        // Get the inner CGImage from the UIImage wrapper
+        CGImageRef cgImage = uiImage.CGImage;
+        
+        // Get the image size
+        width = CGImageGetWidth(cgImage);
+        height = CGImageGetHeight(cgImage);
+        
+        // Record the number of channels
+        channels = CGImageGetBitsPerPixel(cgImage)/CGImageGetBitsPerComponent(cgImage);
+        
+        // Generate a CFData object from the CGImage object (a CFData object represents an area of memory)
+        CFDataRef imageData = CGDataProviderCopyData(CGImageGetDataProvider(cgImage));
+        
+        // Copy the image data for use by Open GL
         ret = [self copyImageDataForOpenGL: imageData];
         CFRelease(imageData);
     }

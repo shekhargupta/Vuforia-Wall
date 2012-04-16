@@ -54,6 +54,7 @@
 		5CF71865153BAC8300A57B5C /* TextureTeapotBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185E153BAC8300A57B5C /* TextureTeapotBlue.png */; };
 		5CF71866153BAC8300A57B5C /* TextureTeapotBrass.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185F153BAC8300A57B5C /* TextureTeapotBrass.png */; };
 		5CF71867153BAC8300A57B5C /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71860153BAC8300A57B5C /* TextureTeapotRed.png */; };
+		5CF7186A153BBAC400A57B5C /* Plane3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF71869153BBAC400A57B5C /* Plane3D.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,8 @@
 		5CF7185E153BAC8300A57B5C /* TextureTeapotBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotBlue.png; sourceTree = "<group>"; };
 		5CF7185F153BAC8300A57B5C /* TextureTeapotBrass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotBrass.png; sourceTree = "<group>"; };
 		5CF71860153BAC8300A57B5C /* TextureTeapotRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureTeapotRed.png; sourceTree = "<group>"; };
+		5CF71868153BBAC400A57B5C /* Plane3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plane3D.h; sourceTree = "<group>"; };
+		5CF71869153BBAC400A57B5C /* Plane3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plane3D.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 			children = (
 				5C519A6A1537ECB00038E8E5 /* ImageWall.h */,
 				5C519A6B1537ECB00038E8E5 /* ImageWall.m */,
+				5CF71868153BBAC400A57B5C /* Plane3D.h */,
+				5CF71869153BBAC400A57B5C /* Plane3D.m */,
 				5CF717FC153B959700A57B5C /* Teapot.h */,
 			);
 			name = Models;
@@ -451,6 +456,7 @@
 				5CF7181D153B961900A57B5C /* Texture.mm in Sources */,
 				5CF71821153B96FA00A57B5C /* QCARViewController.mm in Sources */,
 				5CF71858153BA8CA00A57B5C /* EAGLView.mm in Sources */,
+				5CF7186A153BBAC400A57B5C /* Plane3D.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

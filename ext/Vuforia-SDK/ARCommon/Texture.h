@@ -21,5 +21,7 @@
 @property (nonatomic, readonly) unsigned char* pngData;
 
 - (BOOL)loadImage:(NSString*)filename;
+- (BOOL)loadImageDirect:(UIImage*)uiImage;
+
 
 @end
