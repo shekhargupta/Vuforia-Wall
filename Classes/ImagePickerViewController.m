@@ -8,6 +8,9 @@
 
 #import "ImagePickerViewController.h"
 
+#import "UIImage+Resize.h"
+
+
 @implementation ImagePickerViewController
 
 @synthesize imagePickerShown;
@@ -87,6 +90,13 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+//	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(1024,1024) interpolationQuality:kCGInterpolationMedium];
+//	image = [image croppedImage:CGRectMake(0,0, 1024, 1024)];
+	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(1024,1024)];
+	
+	
+	
+	NSLog(@"image size: [w,h] = [%f,%f]", image.size.width, image.size.height);
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:notificationImagePickerFinished object:image];
 	

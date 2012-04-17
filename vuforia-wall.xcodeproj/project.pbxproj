@@ -10,6 +10,9 @@
 		5C519A6C1537ECB00038E8E5 /* ImageWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A6B1537ECB00038E8E5 /* ImageWall.m */; };
 		5C519A7A15384F2B0038E8E5 /* ImageWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */; };
 		5C519A7B15384F2B0038E8E5 /* ImageWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */; };
+		5C832465153E013B00C0895D /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C832461153E013B00C0895D /* UIImage+Resize.m */; };
+		5C83246C153E374600C0895D /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C83246B153E36CC00C0895D /* UIImage+Alpha.m */; };
+		5C83246D153E374600C0895D /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C832469153E36C700C0895D /* UIImage+RoundedCorner.m */; };
 		5CD9A098153881F200A65501 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A091153881F200A65501 /* InfoPlist.strings */; };
 		5CD9A099153881F200A65501 /* tabFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A094153881F200A65501 /* tabFolder.png */; };
 		5CD9A09A153881F200A65501 /* tabPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A095153881F200A65501 /* tabPortrait.png */; };
@@ -31,6 +34,12 @@
 		5C519A7715384F2B0038E8E5 /* ImageWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageWallViewController.h; path = Classes/ImageWallViewController.h; sourceTree = SOURCE_ROOT; };
 		5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageWallViewController.m; path = Classes/ImageWallViewController.m; sourceTree = SOURCE_ROOT; };
 		5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ImageWallViewController.xib; path = Classes/ImageWallViewController.xib; sourceTree = SOURCE_ROOT; };
+		5C832460153E013B00C0895D /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		5C832461153E013B00C0895D /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		5C832468153E36C700C0895D /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		5C832469153E36C700C0895D /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		5C83246A153E36CC00C0895D /* UIImage+Alpha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		5C83246B153E36CC00C0895D /* UIImage+Alpha.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
 		5CD9A092153881F200A65501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5CD9A094153881F200A65501 /* tabFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabFolder.png; sourceTree = "<group>"; };
 		5CD9A095153881F200A65501 /* tabPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabPortrait.png; sourceTree = "<group>"; };
@@ -66,6 +75,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C83245D153E013B00C0895D /* UIImage-categories */ = {
+			isa = PBXGroup;
+			children = (
+				5C83246A153E36CC00C0895D /* UIImage+Alpha.h */,
+				5C83246B153E36CC00C0895D /* UIImage+Alpha.m */,
+				5C832460153E013B00C0895D /* UIImage+Resize.h */,
+				5C832461153E013B00C0895D /* UIImage+Resize.m */,
+				5C832468153E36C700C0895D /* UIImage+RoundedCorner.h */,
+				5C832469153E36C700C0895D /* UIImage+RoundedCorner.m */,
+			);
+			path = "UIImage-categories";
+			sourceTree = "<group>";
+		};
 		5CD9A090153881F200A65501 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +189,7 @@
 			children = (
 				5CD9D2C11537ACAC00588B56 /* AppDelegate.h */,
 				5CD9D2C21537ACAC00588B56 /* AppDelegate.m */,
+				5C83245D153E013B00C0895D /* UIImage-categories */,
 				5CD9D2D61537AE9700588B56 /* Controllers */,
 				5CD9D2C01537ACAC00588B56 /* Models */,
 				5CD9D2D11537AD9700588B56 /* Views */,
@@ -254,12 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C83246C153E374600C0895D /* UIImage+Alpha.m in Sources */,
+				5C83246D153E374600C0895D /* UIImage+RoundedCorner.m in Sources */,
 				5CD9D2C41537ACAC00588B56 /* AppDelegate.m in Sources */,
 				5CD9D2C51537ACAC00588B56 /* main.m in Sources */,
 				5CD9D2D51537AE9400588B56 /* ImagePickerViewController.m in Sources */,
 				5CD9D2D91537BAAE00588B56 /* TouchImageView.m in Sources */,
 				5C519A6C1537ECB00038E8E5 /* ImageWall.m in Sources */,
 				5C519A7A15384F2B0038E8E5 /* ImageWallViewController.m in Sources */,
+				5C832465153E013B00C0895D /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
