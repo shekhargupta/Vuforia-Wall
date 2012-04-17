@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 
 static NSString* notificationImagePickerFinished = @"ImagePickerFinishedNotification";
+static const int kVWallImageSize = 1024;
+
 
 @interface ImagePickerViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {

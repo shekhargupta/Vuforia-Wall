@@ -7,6 +7,7 @@
 //
 
 #import "ImagePickerViewController.h"
+#import "UIImage+Resize.h"
 
 @implementation ImagePickerViewController
 
@@ -87,6 +88,12 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
+//	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(kVWallImageSize, kVWallImageSize) interpolationQuality:kCGInterpolationMedium];
+	image = [image resizedImage:CGSizeMake(kVWallImageSize, kVWallImageSize) interpolationQuality:kCGInterpolationMedium];
+
+	
+	NSLog(@"imagePickerController didFinish: image info [w,h] = [%f,%f]", image.size.width, image.size.height);
+	
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:notificationImagePickerFinished object:image];
 	

@@ -27,12 +27,12 @@ namespace {
     const char* textureFilenames[] = {
 		"target.png",
 //        "TextureTeapotBrass.png",
-        "TextureTeapotBlue.png",
-        "TextureTeapotRed.png"
+        "target.png",
+        "target.png"
     };
 
     // Model scale factor
-    const float kObjectScale = 100.0f;
+    const float kObjectScale = 5.0f;
 }
 
 
@@ -81,6 +81,8 @@ namespace {
         */
 		Plane3D *obj3D = [[Plane3D alloc] init];
 		TouchImageView* imageView = [[ImageWall sharedInstance].images objectAtIndex:i];
+		NSLog(@"Setup3dObjects: image info [w,h] = [%f,%f]", imageView.image.size.width, imageView.image.size.height);
+		
 		[obj3D setTextureWithImage:imageView.image];
 //        obj3D.texture = [textures objectAtIndex:i];
 
