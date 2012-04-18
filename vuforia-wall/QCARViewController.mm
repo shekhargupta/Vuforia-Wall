@@ -25,7 +25,7 @@ static BOOL firstTime = YES;
         // Custom initialization
 		
 		self.title = NSLocalizedString(@"V-Wall", @"V-Wall");
-		self.tabBarItem.image = [UIImage imageNamed:@"tabPortrait"];
+		self.tabBarItem.image = [UIImage imageNamed:@"tabCamera"];
 		
 		
 		QCARutils *qUtils = [QCARutils getInstance];

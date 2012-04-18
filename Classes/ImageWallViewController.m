@@ -44,7 +44,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)viewDidUnload
+- (void)viewDidUnload;
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.

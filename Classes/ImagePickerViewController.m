@@ -89,7 +89,7 @@
 {
 	UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
 //	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(kVWallImageSize, kVWallImageSize) interpolationQuality:kCGInterpolationMedium];
-	image = [image resizedImage:CGSizeMake(kVWallImageSize, kVWallImageSize) interpolationQuality:kCGInterpolationMedium];
+	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(1022,1022)];
 
 	
 	NSLog(@"imagePickerController didFinish: image info [w,h] = [%f,%f]", image.size.width, image.size.height);
