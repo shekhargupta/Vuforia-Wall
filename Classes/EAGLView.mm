@@ -32,7 +32,7 @@ namespace {
     };
 
     // Model scale factor
-    const float kObjectScale = 5.0f;
+    const float kObjectScale = 50.0f;
 }
 
 
