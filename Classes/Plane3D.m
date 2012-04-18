@@ -37,10 +37,10 @@ static float planeNormals[PLANE3D_NUM_VERTICES*3] =
 
 static float planeTexCoords[PLANE3D_NUM_VERTICES*2] =
 {
-	0.0, 0.0,
-	1.0, 0.0,
-	0.0, 1.0,
 	1.0, 1.0,
+	0.0, 1.0,
+	1.0, 0.0,
+	0.0, 0.0,
 };
 
 
