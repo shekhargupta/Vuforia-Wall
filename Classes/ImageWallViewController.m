@@ -67,6 +67,7 @@
 	
 	TouchImageView* imageView = notification.object;
 	[self.view addSubview:imageView];
+	imageView.currentImageTransform = imageView.transform;
 }
 
 

@@ -15,7 +15,7 @@ imageView.image = image;
 #load
 UIImage* image = [UIImage imageNamed:@"PictureName.png"];
 GLubyte* imageData = malloc(image.size.width * image.size.height * 4);
-CGContextRef imageContext = CGBitmapContextCreate(imageData, image.size.width, image.size.height, 8, image.size.width * 4, CGColorSpaceCreateDeviceRGB(), kCGImageAlphaPremultipliedLast);
+CGContextRef imageContext = CGBitmapContextCreate(imageData, image.size.width, image.size.height, 8, image.size.width * 4, CGColorSpaceCreateDeviceRBG(), kCGImageAlphaPremultipliedLast);
 CGContextDrawImage(imageContext, CGRectMake(0.0, 0.0, image.size.width, image.size.height), image.CGImage);
 CGContextRelease(imageContext); 
 

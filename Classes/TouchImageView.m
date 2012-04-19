@@ -8,6 +8,18 @@
 
 #import "TouchImageView.h"
 
+
+
+
+@implementation ImageTransform
+@synthesize translation;
+@synthesize scale;
+@synthesize rotationAngle;
+@end
+
+
+
+
 @interface TouchImageView()
 
 //- (void)handleNewGestureTransform:(CGAffineTransform)newTransform withSender:(UIGestureRecognizer*)sender;
@@ -18,12 +30,10 @@
 @implementation TouchImageView
 
 @synthesize active;
-@synthesize translation;
-@synthesize scale;
-@synthesize rotationAngle;
 @synthesize currentImageTransform;
 @synthesize currentBounds;
-
+@synthesize currentTransform;
+@synthesize deltaTransform;
 
 
 - (id)initWithFrame:(CGRect)frame;
@@ -32,9 +42,9 @@
     if (self) {
         // Initialization code
 		
-		self.scale = 1.0;
-		self.rotationAngle = 1.0;
-		self.translation = CGPointMake(0, 0);
+		self.currentTransform.scale = 1.0;
+		self.currentTransform.rotationAngle = 1.0;
+		self.currentTransform.translation = CGPointMake(0, 0);
 		
 		[self createGestureRecognizers];
 		self.userInteractionEnabled = YES;
@@ -78,9 +88,17 @@
 
 - (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender;
 {
+	/*
 	CGPoint translate = [sender translationInView:self];
 	CGAffineTransform gestureTransform = CGAffineTransformMakeTranslation(translate.x, translate.y);
 	[self handleNewGestureTransform:gestureTransform withSender:sender];
+	*/
+	self.deltaTransform.translation = [sender translationInView:self];
+	[self updateImageTransform];
+	if (sender.state == UIGestureRecognizerStateEnded) {
+		self.currentTransform.translation = CGPointMake(self.currentTransform.translation.x + self.deltaTransform.translation.x,
+														self.currentTransform.translation.y + self.deltaTransform.translation.y);
+	}
 	
 	/*
 	if (sender.state == UIGestureRecognizerStateBegan) {
@@ -99,8 +117,7 @@
 	if (sender.state == UIGestureRecognizerStateEnded) {
 		NSLog(@"PAN END");
 		self.currentBounds = sender.view.frame;
-	}
-	*/
+	}*/
 }
 
 - (IBAction)handlePinchGesture:(UIPinchGestureRecognizer *)sender;
@@ -126,26 +143,21 @@
 
 - (IBAction)handleRotationGesture:(UIRotationGestureRecognizer *)sender;
 {
+	/*
 	CGFloat factor = [sender rotation] * 10.0 / 180.0 * 3.14;
     CGAffineTransform gestureTransform = CGAffineTransformMakeRotation( factor );
 	[self handleNewGestureTransform:gestureTransform withSender:sender];
+	*/
 	
-	/*
-	if (sender.state == UIGestureRecognizerStateBegan) {
-		self.currentImageTransform = self.transform;
-	}
-	
-	CGFloat factor = [sender rotation];
-    self.transform = CGAffineTransformConcat(self.currentImageTransform, CGAffineTransformMakeRotation( factor / 180.0 * 3.14 ));
-	
+	self.deltaTransform.rotationAngle = [sender rotation] / 180.0 * 3.14;
 	if (sender.state == UIGestureRecognizerStateEnded) {
-		//self.currentImageScale = self.currentImageScale * factor;
-		self.currentImageTransform = self.transform;
+		self.currentTransform.rotationAngle += self.deltaTransform.rotationAngle;
 	}
-	 */
+	[self updateImageTransform];
 }
 
-- (IBAction)handleSingleDoubleTapGesture:(UIGestureRecognizer *)sender {
+- (IBAction)handleSingleDoubleTapGesture:(UIGestureRecognizer *)sender;
+{
     //CGPoint tapPoint = [sender locationInView:sender.view.superview];
 	self.active = !self.active;
 	/*
@@ -161,8 +173,6 @@
 	[[NSNotificationCenter defaultCenter] postNotificationName:notificationTouchImageViewRemoved object:self];
 }
 
-
-
 - (void)handleNewGestureTransform:(CGAffineTransform)newTransform withSender:(UIGestureRecognizer*)sender;
 {
 	if (sender.state == UIGestureRecognizerStateBegan) {
@@ -176,8 +186,16 @@
 	}
 }
 
-
-
+- (void)updateImageTransform;
+{
+	CGAffineTransform t1 = CGAffineTransformMakeTranslation(self.currentTransform.translation.x + self.deltaTransform.translation.x, self.currentTransform.translation.y + self.deltaTransform.translation.y);
+	CGAffineTransform t2 = CGAffineTransformMakeRotation(self.currentTransform.rotationAngle + self.deltaTransform.rotationAngle);
+	CGAffineTransform t3 = CGAffineTransformMakeScale(self.currentTransform.scale * self.deltaTransform.scale, self.currentTransform.scale * self.deltaTransform.scale);
+	
+	NSLog(@"Update with [tx,ty]");
+//	self.transform = CGAffineTransformConcat(self.currentImageTransform, CGAffineTransformConcat(CGAffineTransformConcat(t1, t2), t3));
+	self.transform = t3;
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
