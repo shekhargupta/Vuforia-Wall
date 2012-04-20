@@ -26,6 +26,12 @@
     
 	// ARCfix
     Texture *texture;
+	
+	// Variables to position the object
+	float dx;
+	float dy;
+	float scale;
+	float rotation;
 }
 
 @property (nonatomic) unsigned int numVertices;
@@ -37,6 +43,12 @@
 @property (nonatomic) const unsigned short *indices;
 
 @property (nonatomic) Texture *texture;
+
+@property (nonatomic) float dx;
+@property (nonatomic) float dy;
+@property (nonatomic) float scale;
+@property (nonatomic) float rotation;
+
 
 @end
 

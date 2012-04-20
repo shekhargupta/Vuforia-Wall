@@ -29,6 +29,27 @@
 @synthesize indices;
 @synthesize texture;
 
+@synthesize dx;
+@synthesize dy;
+@synthesize scale;
+@synthesize rotation;
+
+
+
+- (id)init;
+{
+	self = [super init];
+	if (self) {
+		self.dx = 0.0;
+		self.dy = 0.0;
+		self.scale = 1.0;
+		self.rotation = 0.0;
+	}
+	return self;
+}
+
+
+
 @end
 
 @interface AR_EAGLView (PrivateMethods)

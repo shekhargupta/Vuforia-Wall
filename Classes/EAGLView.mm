@@ -68,23 +68,21 @@ namespace {
 	NSLog(@" ImageWall count %d", [ImageWall sharedInstance].images.count);
     for (int i=0; i < [ImageWall sharedInstance].images.count; i++)
     {
-		/*
-        Object3D *obj3D = [[Object3D alloc] init];
-		
-        obj3D.numVertices = NUM_TEAPOT_OBJECT_VERTEX;
-        obj3D.vertices = teapotVertices;
-        obj3D.normals = teapotNormals;
-        obj3D.texCoords = teapotTexCoords;
-        
-        obj3D.numIndices = NUM_TEAPOT_OBJECT_INDEX;
-        obj3D.indices = teapotIndices;
-        */
 		Plane3D *obj3D = [[Plane3D alloc] init];
 		TouchImageView* imageView = [[ImageWall sharedInstance].images objectAtIndex:i];
-		NSLog(@"Setup3dObjects: image info [w,h] = [%f,%f]", imageView.image.size.width, imageView.image.size.height);
+		
+		
+		
+		NSLog(@"Setup3dObjects: image info [w,h,tx,ty,scale,rotation] = [%f,%f,%f,%f,%f,%f]",
+			  imageView.image.size.width,
+			  imageView.image.size.height,
+			  obj3D.dx,
+			  obj3D.dy,
+			  obj3D.scale,
+			  obj3D.rotation
+			  );
 		
 		[obj3D setTextureWithImage:imageView.image];
-//        obj3D.texture = [textures objectAtIndex:i];
 
         [objects3D addObject:obj3D];
 //ARCfix        [obj3D release];
@@ -169,6 +167,9 @@ namespace {
             glScalef(kObjectScale, kObjectScale, kObjectScale);
             
             // Draw object
+			glTranslatef(obj3D.dx, obj3D.dy, 0.0);
+			glRotatef(obj3D.rotation, 0, 0, 1);
+			glScalef(obj3D.scale, obj3D.scale, 1.0);
 			
 			
             glBindTexture(GL_TEXTURE_2D, obj3D.texture.textureID);
@@ -182,8 +183,11 @@ namespace {
             // OpenGL 2
             QCAR::Matrix44F modelViewProjection;
             
-//            ShaderUtils::translatePoseMatrix(0.0f, 0.0f, kObjectScale, &modelViewMatrix.data[0]);
-            ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
+			ShaderUtils::translatePoseMatrix(obj3D.dx, obj3D.dy, 0);
+			ShaderUtils::rotatePoseMatrix(obj3D.rotation, 0, 0, 1);
+			ShaderUtils::scalePoseMatrix(obj3D.scale, obj3D.scale, 1.0);
+			
+			ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
             ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
             
             glUseProgram(shaderProgramID);
