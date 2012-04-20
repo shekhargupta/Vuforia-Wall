@@ -24,6 +24,13 @@ static NSString* notificationTouchImageViewRemoved = @"TouchImageViewRemovedNoti
 }
 @property (nonatomic, assign) BOOL active;
 
+
+- (float)myX;
+- (float)myY;
+- (float)myRotation;
+- (float)myScale;
+
+
 - (void)createGestureRecognizers;
 
 - (IBAction)handlePanGesture:(UIPanGestureRecognizer *)sender; // Dragging

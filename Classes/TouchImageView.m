@@ -105,7 +105,7 @@
 
 - (IBAction)handleRotationGesture:(UIRotationGestureRecognizer *)sender;
 {
-	drotation = [sender rotation] * 50.0 / 180.0 * 3.14;
+	drotation = [sender rotation] * 50.0;
 	[self updateImageTransform];
 	if (sender.state == UIGestureRecognizerStateEnded) {
 		rotation = rotation + drotation;
@@ -140,7 +140,7 @@
 	NSLog(@"Update with [tx,ty,scale,rotation] = %f,%f,%f,%f\n", x_new,y_new,scale_new,rotation_new);
 	
 	CGAffineTransform t_translate = CGAffineTransformMakeTranslation(x_new, y_new);
-	CGAffineTransform t_rotation = CGAffineTransformMakeRotation(rotation_new);
+	CGAffineTransform t_rotation = CGAffineTransformMakeRotation(rotation_new / 180.0 * 3.14); // convert to radian
 	CGAffineTransform t_scale = CGAffineTransformMakeScale(scale_new, scale_new);
 	
 	self.transform = CGAffineTransformConcat(CGAffineTransformConcat(t_translate, t_rotation), t_scale);
@@ -160,6 +160,28 @@
 	}
     // Drawing code
 }
+
+
+
+
+
+- (float)myX;
+{
+	return x;
+}
+- (float)myY;
+{
+	return y;
+}
+- (float)myRotation;
+{
+	return rotation;
+}
+- (float)myScale;
+{
+	return scale;
+}
+
 
 
 @end

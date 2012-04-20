@@ -72,6 +72,11 @@ namespace {
 		TouchImageView* imageView = [[ImageWall sharedInstance].images objectAtIndex:i];
 		
 		
+		obj3D.dx = [imageView myX];
+		obj3D.dy = [imageView myY];
+		obj3D.rotation = [imageView myRotation];
+		obj3D.scale = [imageView myScale];
+		
 		
 		NSLog(@"Setup3dObjects: image info [w,h,tx,ty,scale,rotation] = [%f,%f,%f,%f,%f,%f]",
 			  imageView.image.size.width,
@@ -80,11 +85,11 @@ namespace {
 			  obj3D.dy,
 			  obj3D.scale,
 			  obj3D.rotation
-			  );
+		);
 		
 		[obj3D setTextureWithImage:imageView.image];
-
-        [objects3D addObject:obj3D];
+		
+		[objects3D addObject:obj3D];
 //ARCfix        [obj3D release];
     }
 }
@@ -141,7 +146,6 @@ namespace {
 		
         // Get the trackable
         const QCAR::Trackable* trackable = state.getActiveTrackable(i);
-        QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(trackable->getPose());
         
         // Choose the texture based on the target name
         int targetIndex = 0; // "stones"
@@ -151,65 +155,69 @@ namespace {
             targetIndex = 2;
         
 		for (int j=0; j<objects3D.count; j++) {
+			QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(trackable->getPose());
+			
 			Object3D *obj3D = [objects3D objectAtIndex:j];
-        
-        // Render using the appropriate version of OpenGL
-        if (QCAR::GL_11 & qUtils.QCARFlags) {
-            // Load the projection matrix
-            glMatrixMode(GL_PROJECTION);
-            glLoadMatrixf(qUtils.projectionMatrix.data);
-            
-            // Load the model-view matrix
-            glMatrixMode(GL_MODELVIEW);
-            glLoadMatrixf(modelViewMatrix.data);
 			
-//            glTranslatef(0.0f, 0.0f, -kObjectScale);
-            glScalef(kObjectScale, kObjectScale, kObjectScale);
-            
-            // Draw object
-			glTranslatef(obj3D.dx, obj3D.dy, 0.0);
-			glRotatef(obj3D.rotation, 0, 0, 1);
-			glScalef(obj3D.scale, obj3D.scale, 1.0);
-			
-			
-            glBindTexture(GL_TEXTURE_2D, obj3D.texture.textureID);
-            glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
-            glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
-            glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
-            glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
-        }
+			// Render using the appropriate version of OpenGL
+			if (QCAR::GL_11 & qUtils.QCARFlags) {
+				// Load the projection matrix
+				glMatrixMode(GL_PROJECTION);
+				glLoadMatrixf(qUtils.projectionMatrix.data);
+				
+				// Load the model-view matrix
+				glMatrixMode(GL_MODELVIEW);
+				glLoadMatrixf(modelViewMatrix.data);
+				
+				//            glTranslatef(0.0f, 0.0f, -kObjectScale);
+				glScalef(kObjectScale, kObjectScale, kObjectScale);
+				
+				// Draw object
+				glTranslatef(0, 0, 0.00001*j);
+				glTranslatef(obj3D.dx * 0.01, obj3D.dy * -0.01, 0.0);
+				glRotatef(-obj3D.rotation, 0, 0, 1);
+				glScalef(obj3D.scale, obj3D.scale, 1.0);
+				
+				glBindTexture(GL_TEXTURE_2D, obj3D.texture.textureID);
+				glTexCoordPointer(2, GL_FLOAT, 0, (const GLvoid*)obj3D.texCoords);
+				glVertexPointer(3, GL_FLOAT, 0, (const GLvoid*)obj3D.vertices);
+				glNormalPointer(GL_FLOAT, 0, (const GLvoid*)obj3D.normals);
+				glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
+			}
 #ifndef USE_OPENGL1
-        else {
-            // OpenGL 2
-            QCAR::Matrix44F modelViewProjection;
-            
-			ShaderUtils::translatePoseMatrix(obj3D.dx, obj3D.dy, 0);
-			ShaderUtils::rotatePoseMatrix(obj3D.rotation, 0, 0, 1);
-			ShaderUtils::scalePoseMatrix(obj3D.scale, obj3D.scale, 1.0);
-			
-			ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
-            ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
-            
-            glUseProgram(shaderProgramID);
-            
-            glVertexAttribPointer(vertexHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.vertices);
-            glVertexAttribPointer(normalHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.normals);
-            glVertexAttribPointer(textureCoordHandle, 2, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.texCoords);
-            
-            glEnableVertexAttribArray(vertexHandle);
-            glEnableVertexAttribArray(normalHandle);
-            glEnableVertexAttribArray(textureCoordHandle);
-    
-			
-            glActiveTexture(GL_TEXTURE0);
-            glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
-            glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
-            glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
-			
-			ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
-        }
+			else {
+				// OpenGL 2
+				QCAR::Matrix44F modelViewProjection;
+				
+				ShaderUtils::scalePoseMatrix(kObjectScale, kObjectScale, kObjectScale, &modelViewMatrix.data[0]);
+				ShaderUtils::translatePoseMatrix(0, 0, 0.00001*j, &modelViewMatrix.data[0]);
+				
+				ShaderUtils::rotatePoseMatrix(-obj3D.rotation, 0, 0, 1, &modelViewMatrix.data[0]);
+				ShaderUtils::translatePoseMatrix(obj3D.dx * 0.01, obj3D.dy * -0.01, 0, &modelViewMatrix.data[0]);
+				ShaderUtils::scalePoseMatrix(obj3D.scale, obj3D.scale, 1.0, &modelViewMatrix.data[0]);
+				
+				ShaderUtils::multiplyMatrix(&qUtils.projectionMatrix.data[0], &modelViewMatrix.data[0], &modelViewProjection.data[0]);
+				
+				glUseProgram(shaderProgramID);
+				
+				glVertexAttribPointer(vertexHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.vertices);
+				glVertexAttribPointer(normalHandle, 3, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.normals);
+				glVertexAttribPointer(textureCoordHandle, 2, GL_FLOAT, GL_FALSE, 0, (const GLvoid*)obj3D.texCoords);
+				
+				glEnableVertexAttribArray(vertexHandle);
+				glEnableVertexAttribArray(normalHandle);
+				glEnableVertexAttribArray(textureCoordHandle);
+				
+				
+				glActiveTexture(GL_TEXTURE0);
+				glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
+				glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
+				glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
+				
+				ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
+			}
 #endif
-    }
+		}
 	}
 	
     
