@@ -31,11 +31,19 @@
 	// if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {}
 	vc1 = [[ImagePickerViewController alloc] init];
 	vc2 = [[ImageWallViewController alloc] init];
+#if !(TARGET_IPHONE_SIMULATOR)
 	vc3 = [[QCARViewController alloc] init];
+#endif
 	
 	self.tabBarController = [[UITabBarController alloc] init];
 	self.tabBarController.delegate = self;
+	
+#if !(TARGET_IPHONE_SIMULATOR)
 	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,vc3,nil];
+#else
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,nil];
+#endif
+	
 	self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
 	

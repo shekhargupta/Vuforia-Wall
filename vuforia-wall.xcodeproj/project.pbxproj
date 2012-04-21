@@ -14,6 +14,46 @@
 		5C8323E5153CA4CE00C0895D /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8323E2153CA4CE00C0895D /* UIImage+RoundedCorner.m */; };
 		5C8324A6153E3AC800C0895D /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8324A5153E3A8700C0895D /* UIImage+Resize.m */; };
 		5C8324A8153E3E3000C0895D /* tabCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C8324A7153E3E3000C0895D /* tabCamera.png */; };
+		5CBBD4A41542F1A800571FB8 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8324A5153E3A8700C0895D /* UIImage+Resize.m */; };
+		5CBBD4A51542F1A800571FB8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2C21537ACAC00588B56 /* AppDelegate.m */; };
+		5CBBD4A61542F1A800571FB8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2C31537ACAC00588B56 /* main.m */; };
+		5CBBD4A71542F1A800571FB8 /* ImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2D41537AE9400588B56 /* ImagePickerViewController.m */; };
+		5CBBD4A81542F1A800571FB8 /* TouchImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9D2D81537BAAE00588B56 /* TouchImageView.m */; };
+		5CBBD4A91542F1A800571FB8 /* ImageWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A6B1537ECB00038E8E5 /* ImageWall.m */; };
+		5CBBD4AA1542F1A800571FB8 /* ImageWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */; };
+		5CBBD4B61542F1A800571FB8 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8323DE153CA4CE00C0895D /* UIImage+Alpha.m */; };
+		5CBBD4B71542F1A800571FB8 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8323E2153CA4CE00C0895D /* UIImage+RoundedCorner.m */; };
+		5CBBD4B91542F1A800571FB8 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF71854153BA6D100A57B5C /* OpenGLES.framework */; };
+		5CBBD4BA1542F1A800571FB8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF71850153BA55E00A57B5C /* Security.framework */; };
+		5CBBD4BB1542F1A800571FB8 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF7184E153BA55400A57B5C /* CoreVideo.framework */; };
+		5CBBD4BC1542F1A800571FB8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF7184C153BA54A00A57B5C /* AVFoundation.framework */; };
+		5CBBD4BD1542F1A800571FB8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF7184A153BA54600A57B5C /* SystemConfiguration.framework */; };
+		5CBBD4BE1542F1A800571FB8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF71848153BA53C00A57B5C /* CoreMedia.framework */; };
+		5CBBD4BF1542F1A800571FB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF71846153BA52C00A57B5C /* QuartzCore.framework */; };
+		5CBBD4C01542F1A800571FB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDC8AD41537ABAC0087B9EC /* UIKit.framework */; };
+		5CBBD4C11542F1A800571FB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDC8AD61537ABAC0087B9EC /* Foundation.framework */; };
+		5CBBD4C21542F1A800571FB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDC8AD81537ABAC0087B9EC /* CoreGraphics.framework */; };
+		5CBBD4C51542F1A800571FB8 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9D2CF1537AD6700588B56 /* README */; };
+		5CBBD4C61542F1A800571FB8 /* ImageWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */; };
+		5CBBD4C71542F1A800571FB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A091153881F200A65501 /* InfoPlist.strings */; };
+		5CBBD4C81542F1A800571FB8 /* tabFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A094153881F200A65501 /* tabFolder.png */; };
+		5CBBD4C91542F1A800571FB8 /* tabPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A095153881F200A65501 /* tabPortrait.png */; };
+		5CBBD4CA1542F1A800571FB8 /* tabTarget.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A096153881F200A65501 /* tabTarget.png */; };
+		5CBBD4CB1542F1A800571FB8 /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A097153881F200A65501 /* target.png */; };
+		5CBBD4CC1542F1A800571FB8 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71834153BA45B00A57B5C /* Default-Portrait~ipad.png */; };
+		5CBBD4CD1542F1A800571FB8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71835153BA45B00A57B5C /* Default.png */; };
+		5CBBD4CE1542F1A800571FB8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71836153BA45B00A57B5C /* Default@2x.png */; };
+		5CBBD4CF1542F1A800571FB8 /* icon_vuforia_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71837153BA45B00A57B5C /* icon_vuforia_57x57.png */; };
+		5CBBD4D01542F1A800571FB8 /* icon_vuforia_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71838153BA45B00A57B5C /* icon_vuforia_72x72.png */; };
+		5CBBD4D11542F1A800571FB8 /* icon_vuforia_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71839153BA45B00A57B5C /* icon_vuforia_114x114.png */; };
+		5CBBD4D21542F1A800571FB8 /* StonesAndChips.dat in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185A153BAC8300A57B5C /* StonesAndChips.dat */; };
+		5CBBD4D31542F1A800571FB8 /* StonesAndChips.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185B153BAC8300A57B5C /* StonesAndChips.xml */; };
+		5CBBD4D41542F1A800571FB8 /* Tarmac.dat in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185C153BAC8300A57B5C /* Tarmac.dat */; };
+		5CBBD4D51542F1A800571FB8 /* Tarmac.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185D153BAC8300A57B5C /* Tarmac.xml */; };
+		5CBBD4D61542F1A800571FB8 /* TextureTeapotBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185E153BAC8300A57B5C /* TextureTeapotBlue.png */; };
+		5CBBD4D71542F1A800571FB8 /* TextureTeapotBrass.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7185F153BAC8300A57B5C /* TextureTeapotBrass.png */; };
+		5CBBD4D81542F1A800571FB8 /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF71860153BAC8300A57B5C /* TextureTeapotRed.png */; };
+		5CBBD4D91542F1A800571FB8 /* tabCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C8324A7153E3E3000C0895D /* tabCamera.png */; };
 		5CD9A098153881F200A65501 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A091153881F200A65501 /* InfoPlist.strings */; };
 		5CD9A099153881F200A65501 /* tabFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A094153881F200A65501 /* tabFolder.png */; };
 		5CD9A09A153881F200A65501 /* tabPortrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A095153881F200A65501 /* tabPortrait.png */; };
@@ -74,6 +114,8 @@
 		5C8324A4153E3A8700C0895D /* UIImage+Resize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
 		5C8324A5153E3A8700C0895D /* UIImage+Resize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		5C8324A7153E3E3000C0895D /* tabCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabCamera.png; sourceTree = "<group>"; };
+		5CBBD4DD1542F1A800571FB8 /* vuforia-wall copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vuforia-wall copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CBBD4DF1542F1A800571FB8 /* vuforia-wall copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "vuforia-wall copy-Info.plist"; path = "/Users/edo/Projects/vuforia-wall/vuforia-wall copy-Info.plist"; sourceTree = "<absolute>"; };
 		5CD9A092153881F200A65501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		5CD9A094153881F200A65501 /* tabFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabFolder.png; sourceTree = "<group>"; };
 		5CD9A095153881F200A65501 /* tabPortrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabPortrait.png; sourceTree = "<group>"; };
@@ -142,6 +184,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5CBBD4B81542F1A800571FB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CBBD4B91542F1A800571FB8 /* OpenGLES.framework in Frameworks */,
+				5CBBD4BA1542F1A800571FB8 /* Security.framework in Frameworks */,
+				5CBBD4BB1542F1A800571FB8 /* CoreVideo.framework in Frameworks */,
+				5CBBD4BC1542F1A800571FB8 /* AVFoundation.framework in Frameworks */,
+				5CBBD4BD1542F1A800571FB8 /* SystemConfiguration.framework in Frameworks */,
+				5CBBD4BE1542F1A800571FB8 /* CoreMedia.framework in Frameworks */,
+				5CBBD4BF1542F1A800571FB8 /* QuartzCore.framework in Frameworks */,
+				5CBBD4C01542F1A800571FB8 /* UIKit.framework in Frameworks */,
+				5CBBD4C11542F1A800571FB8 /* Foundation.framework in Frameworks */,
+				5CBBD4C21542F1A800571FB8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CDC8ACD1537ABAC0087B9EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +326,7 @@
 				5CDC8ADA1537ABAC0087B9EC /* vuforia-wall */,
 				5CDC8AD31537ABAC0087B9EC /* Frameworks */,
 				5CDC8AD11537ABAC0087B9EC /* Products */,
+				5CBBD4DF1542F1A800571FB8 /* vuforia-wall copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -274,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				5CDC8AD01537ABAC0087B9EC /* vuforia-wall.app */,
+				5CBBD4DD1542F1A800571FB8 /* vuforia-wall copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -390,6 +451,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5CBBD4A21542F1A800571FB8 /* vuforia-wall Simulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CBBD4DA1542F1A800571FB8 /* Build configuration list for PBXNativeTarget "vuforia-wall Simulator" */;
+			buildPhases = (
+				5CBBD4A31542F1A800571FB8 /* Sources */,
+				5CBBD4B81542F1A800571FB8 /* Frameworks */,
+				5CBBD4C41542F1A800571FB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "vuforia-wall Simulator";
+			productName = "vuforia-wall";
+			productReference = 5CBBD4DD1542F1A800571FB8 /* vuforia-wall copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		5CDC8ACF1537ABAC0087B9EC /* vuforia-wall */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CDC8AE81537ABAC0087B9EC /* Build configuration list for PBXNativeTarget "vuforia-wall" */;
@@ -428,11 +506,40 @@
 			projectRoot = "";
 			targets = (
 				5CDC8ACF1537ABAC0087B9EC /* vuforia-wall */,
+				5CBBD4A21542F1A800571FB8 /* vuforia-wall Simulator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5CBBD4C41542F1A800571FB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CBBD4C51542F1A800571FB8 /* README in Resources */,
+				5CBBD4C61542F1A800571FB8 /* ImageWallViewController.xib in Resources */,
+				5CBBD4C71542F1A800571FB8 /* InfoPlist.strings in Resources */,
+				5CBBD4C81542F1A800571FB8 /* tabFolder.png in Resources */,
+				5CBBD4C91542F1A800571FB8 /* tabPortrait.png in Resources */,
+				5CBBD4CA1542F1A800571FB8 /* tabTarget.png in Resources */,
+				5CBBD4CB1542F1A800571FB8 /* target.png in Resources */,
+				5CBBD4CC1542F1A800571FB8 /* Default-Portrait~ipad.png in Resources */,
+				5CBBD4CD1542F1A800571FB8 /* Default.png in Resources */,
+				5CBBD4CE1542F1A800571FB8 /* Default@2x.png in Resources */,
+				5CBBD4CF1542F1A800571FB8 /* icon_vuforia_57x57.png in Resources */,
+				5CBBD4D01542F1A800571FB8 /* icon_vuforia_72x72.png in Resources */,
+				5CBBD4D11542F1A800571FB8 /* icon_vuforia_114x114.png in Resources */,
+				5CBBD4D21542F1A800571FB8 /* StonesAndChips.dat in Resources */,
+				5CBBD4D31542F1A800571FB8 /* StonesAndChips.xml in Resources */,
+				5CBBD4D41542F1A800571FB8 /* Tarmac.dat in Resources */,
+				5CBBD4D51542F1A800571FB8 /* Tarmac.xml in Resources */,
+				5CBBD4D61542F1A800571FB8 /* TextureTeapotBlue.png in Resources */,
+				5CBBD4D71542F1A800571FB8 /* TextureTeapotBrass.png in Resources */,
+				5CBBD4D81542F1A800571FB8 /* TextureTeapotRed.png in Resources */,
+				5CBBD4D91542F1A800571FB8 /* tabCamera.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CDC8ACE1537ABAC0087B9EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -464,6 +571,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5CBBD4A31542F1A800571FB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CBBD4A41542F1A800571FB8 /* UIImage+Resize.m in Sources */,
+				5CBBD4A51542F1A800571FB8 /* AppDelegate.m in Sources */,
+				5CBBD4A61542F1A800571FB8 /* main.m in Sources */,
+				5CBBD4A71542F1A800571FB8 /* ImagePickerViewController.m in Sources */,
+				5CBBD4A81542F1A800571FB8 /* TouchImageView.m in Sources */,
+				5CBBD4A91542F1A800571FB8 /* ImageWall.m in Sources */,
+				5CBBD4AA1542F1A800571FB8 /* ImageWallViewController.m in Sources */,
+				5CBBD4B61542F1A800571FB8 /* UIImage+Alpha.m in Sources */,
+				5CBBD4B71542F1A800571FB8 /* UIImage+RoundedCorner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5CDC8ACC1537ABAC0087B9EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,6 +628,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5CBBD4DB1542F1A800571FB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				INFOPLIST_FILE = "vuforia-wall copy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/arm\"",
+				);
+				PRODUCT_NAME = "vuforia-wall copy";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5CBBD4DC1542F1A800571FB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "$(OTHER_CFLAGS)";
+				INFOPLIST_FILE = "vuforia-wall copy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/arm\"",
+				);
+				PRODUCT_NAME = "vuforia-wall copy";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		5CDC8AE61537ABAC0087B9EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -596,6 +752,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5CBBD4DA1542F1A800571FB8 /* Build configuration list for PBXNativeTarget "vuforia-wall Simulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CBBD4DB1542F1A800571FB8 /* Debug */,
+				5CBBD4DC1542F1A800571FB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5CDC8ACA1537ABAC0087B9EC /* Build configuration list for PBXProject "vuforia-wall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
