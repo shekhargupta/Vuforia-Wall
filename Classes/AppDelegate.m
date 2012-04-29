@@ -2,8 +2,9 @@
 //  AppDelegate.m
 //  vuforia-wall
 //
-//  Created by Edo on 13.04.12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Eduard Feicho <eduard_DOT_feicho_AT_rwth-aachen_DOT_de> on 13.04.12.
+//  Source: https://github.com/Duffycola/Vuforia-Wall
+//  Copyright (c) 2012 Eduard Feicho. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -23,12 +24,8 @@
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 	
-	
-	
 	UIViewController *vc1, *vc2, *vc3;
 	
-	// TODO
-	// if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {}
 	vc1 = [[ImagePickerViewController alloc] init];
 	vc2 = [[ImageWallViewController alloc] init];
 #if !(TARGET_IPHONE_SIMULATOR)

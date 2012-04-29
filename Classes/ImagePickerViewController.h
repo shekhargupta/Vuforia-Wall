@@ -2,8 +2,9 @@
 //  ImagePickerController.h
 //  vuforia-wall
 //
-//  Created by Edo on 13.04.12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Eduard Feicho <eduard_DOT_feicho_AT_rwth-aachen_DOT_de> on 13.04.12.
+//  Source: https://github.com/Duffycola/Vuforia-Wall
+//  Copyright (c) 2012 Eduard Feicho. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

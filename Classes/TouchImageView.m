@@ -2,8 +2,9 @@
 //  TouchImageView.m
 //  vuforia-wall
 //
-//  Created by Edo on 13.04.12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Eduard Feicho <eduard_DOT_feicho_AT_rwth-aachen_DOT_de> on 13.04.12.
+//  Source: https://github.com/Duffycola/Vuforia-Wall
+//  Copyright (c) 2012 Eduard Feicho. All rights reserved.
 //
 
 #import "TouchImageView.h"
@@ -26,7 +27,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-		
 		
 		x = 0.0;
 		y = 0.0;
@@ -140,7 +140,7 @@
 	NSLog(@"Update with [tx,ty,scale,rotation] = %f,%f,%f,%f\n", x_new,y_new,scale_new,rotation_new);
 	
 	CGAffineTransform t_translate = CGAffineTransformMakeTranslation(x_new, y_new);
-	CGAffineTransform t_rotation = CGAffineTransformMakeRotation(rotation_new / 180.0 * 3.14); // convert to radian
+	CGAffineTransform t_rotation = CGAffineTransformMakeRotation(rotation_new / 180.0 * 3.14); // degree to radian
 	CGAffineTransform t_scale = CGAffineTransformMakeScale(scale_new, scale_new);
 	
 	self.transform = CGAffineTransformConcat(CGAffineTransformConcat(t_translate, t_rotation), t_scale);
@@ -163,23 +163,21 @@
 
 
 
-
-
 - (float)myX;
 {
-	return x;
+	return x + dx;
 }
 - (float)myY;
 {
-	return y;
+	return y + dy;
 }
 - (float)myRotation;
 {
-	return rotation;
+	return rotation + drotation;
 }
 - (float)myScale;
 {
-	return scale;
+	return scale * dscale;
 }
 
 
