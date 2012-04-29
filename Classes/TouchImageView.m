@@ -27,7 +27,6 @@
     if (self) {
         // Initialization code
 		
-		
 		x = 0.0;
 		y = 0.0;
 		rotation = 0.0;
@@ -163,23 +162,21 @@
 
 
 
-
-
 - (float)myX;
 {
-	return x;
+	return x + dx;
 }
 - (float)myY;
 {
-	return y;
+	return y + dy;
 }
 - (float)myRotation;
 {
-	return rotation;
+	return rotation + drotation;
 }
 - (float)myScale;
 {
-	return scale;
+	return scale * dscale;
 }
 
 

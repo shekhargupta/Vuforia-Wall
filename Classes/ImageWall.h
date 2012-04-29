@@ -26,5 +26,4 @@ static NSString* notificationImageWallRemoveImage = @"ImageWallRemoveImageNotifi
 
 + (ImageWall*)sharedInstance;
 
-
 @end

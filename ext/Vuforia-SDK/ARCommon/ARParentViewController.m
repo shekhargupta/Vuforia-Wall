@@ -71,9 +71,10 @@
     
     // Create an auto-rotating overlay view and its view controller (used for
     // displaying UI objects, such as the camera control menu)
+	/*
     overlayViewController = [[OverlayViewController alloc] init];
     [parentView addSubview: overlayViewController.view];
-    
+    */
     self.view = parentView;
 }
 
@@ -134,6 +135,8 @@
 }
 
 
+
+/*
 // touch handlers
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -160,5 +163,6 @@
 {
     // iOS requires all events handled if touchesBegan is handled and not forwarded
 }
+ */
 
 @end
