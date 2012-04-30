@@ -86,7 +86,7 @@ static unsigned short planeIndices[PLANE3D_NUM_INDICES] =
 	glBindTexture(GL_TEXTURE_2D, nID);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, [theTexture width], [theTexture height], 0, GL_RGBA, GL_UNSIGNED_BYTE, (GLvoid*)[theTexture pngData]);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, [theTexture width], [theTexture height], 0, GL_BGRA, GL_UNSIGNED_BYTE, (GLvoid*)[theTexture pngData]);
 	
 	self.texture = theTexture;
 }
