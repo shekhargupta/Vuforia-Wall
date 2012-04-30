@@ -1,35 +1,40 @@
 # This is my README
 
+Vuforia-Wall is a Virtual Reality iPhone App based on Vuforia-SDK from Qualcomm.
+The simple idea is to provide a virtual image wall. Pick images from your iPhone camera or photo library, arrange them and watch them in Augmented Reality.
 
-# Setup an image
-UIImage *image = [UIImage imageNamed:@"image.png"];
-UIImageView *imageView = [ [ UIImageView alloc ] initWithFrame:CGRectMake(0.0, 0.0, image.size.width, image.size.height) ];
-imageView.image = image;
+# INSTALLATION
 
-[self addSubview:imageView];
+* XCode IDE and Apple Developer Program
+Make sure XCode is installed (https://developer.apple.com/xcode/) or install from the Mac App Store. To build Apps on the device, membership in the Apple iPhone Developer Program is required ($99/year)
+
+* Qualcomm Vuforia SDK
+Vuforia-Wall requires Qualcomm Vuforia SDK for iOS available from "https:// ar.qualcomm.at/qdevnet/sdk/ios". Download and install the SDK (vuforia-sdk- ios-1-5-8.zip). As of date, the working version is 1-5-8.
+Per default the SDK is installed to ~/Development/iOS/vuforia-sdk-ios-1-5-8/.
+
+To be sure everything works correct with your installation, try to compile the samples in ~/ Development/iOS/vuforia-sdk-ios-1-5-8/samples/.
+You might get an error like "no valid provisioning device found". The problem is, in order to compile for devices, you need to have a valid Developer Certificate from the Apple Developer Program. Thus, without paying for the membership, you won't be able to simulate the Vuforia-SDK, as the Vuforia library only contains symbols for iOS devices, but does not work only with the iPhone Simulator.
+Also note, that the ARC feature (Automatic Reference Counting) is quite new and the Vuforia SDK doesn't compile with ARC. When using ARC, you have to fix retain, release, and NSAutoReleasePool calls, as well as some retain properties to weak/strong. Therefore, prefer to disable ARC when you do a new project.
 
 
+* Vuforia-Wall Xcode Project
+Download and open Vuforia-Wall Xcode Project from github (https://github.com/Duffycola/ Vuforia-Wall). Alternatively, checkout the git repository using git:
+	$ mkdir vuforia-wall
+	cd vuforia-wall
+	git init
+	git remote add origin https://github.com/Duffycola/Vuforia-Wall.git
+	git pull
+	open vuforia-wall.xcodeproj
 
-# How to load a png from bundle, create a texture and render
+Possibly, the library paths are not correct. If libQCAR.a appears red (ext/Vuforia-SDK/ libQCAR.a) try to remove it from the project and manually add it again per Drag-and-Drop located at ~/Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/arm/libQCAR.a.
 
-#load
-UIImage* image = [UIImage imageNamed:@"PictureName.png"];
-GLubyte* imageData = malloc(image.size.width * image.size.height * 4);
-CGContextRef imageContext = CGBitmapContextCreate(imageData, image.size.width, image.size.height, 8, image.size.width * 4, CGColorSpaceCreateDeviceRBG(), kCGImageAlphaPremultipliedLast);
-CGContextDrawImage(imageContext, CGRectMake(0.0, 0.0, image.size.width, image.size.height), image.CGImage);
-CGContextRelease(imageContext); 
+Furthermore, make sure the project settings are similar to the following:
+• HEADER_SEARCH_PATHS points to ~/Development/iOS/vuforia-sdk-ios-1-5-8/build/ include/
+• LIBRARY_SEARCH_PATHS points to ~/Development/iOS/vuforia-sdk-ios-1-5-8/build/lib/ arm/
 
-#create texture
-GLuint texture;
-glGenTextures(1, &texture);
-glBindTexture(GL_TEXTURE_2D, texture);
-glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image.size.width, image.size.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, imageData);
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); 
-glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+When you have installed a developer certificate correctly following the instructions in from the iPhone developer program website, CODE_SIGN_IDENTITY should point to your certificate, like in this screenshot.
+Note, the project has a simulator target, but it will build without Vuforia SDK and thus Augmented Reality view will not be visible. This is useful for testing SDK unrelated code.
 
-#render
-glBindTexture(GL_TEXTURE_2D, texture);
-glVertexPointer(2, GL_FLOAT, 0, vertices);
-glNormalPointer(GL_FLOAT, 0, normals);
-glTexCoordPointer(2, GL_FLOAT, 0, textureCoords);
-glDrawArrays(GL_TRIANGLE_STRIP, 0, 4)
+
+== EOF ==
+
