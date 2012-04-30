@@ -156,14 +156,20 @@ namespace {
     
     if (QCAR::GL_11 & qUtils.QCARFlags) {
         glEnable(GL_TEXTURE_2D);
+		
         glDisable(GL_LIGHTING);
         glEnableClientState(GL_VERTEX_ARRAY);
         glEnableClientState(GL_NORMAL_ARRAY);
         glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     }
+	
+	
     
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
+	
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     
 	if (state.getNumActiveTrackables() > 0) {
 //    for (int i = 0; i < state.getNumActiveTrackables(); ++i) {
@@ -224,10 +230,12 @@ namespace {
 				glEnableVertexAttribArray(normalHandle);
 				glEnableVertexAttribArray(textureCoordHandle);
 				
+				
 				glActiveTexture(GL_TEXTURE0);
 				glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
 				glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
 				glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
+				
 				
 				ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
 			}
@@ -235,6 +243,8 @@ namespace {
 		}
 	}
     
+	glDisable(GL_BLEND);
+	
     glDisable(GL_DEPTH_TEST);
     glDisable(GL_CULL_FACE);
     
