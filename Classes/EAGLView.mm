@@ -69,11 +69,13 @@ namespace {
     
 	NSLog(@"EAGLView setup3dObjects");
 	
+
 	[objects3D removeAllObjects];
     for (int i=0; i < [ImageWall sharedInstance].images.count; i++) {
 		TouchImageView* imageView = [[ImageWall sharedInstance].images objectAtIndex:i];
 		
 		Plane3D *obj3D = [[Plane3D alloc] init];
+
 		obj3D.dx = [imageView myX];
 		obj3D.dy = [imageView myY];
 		obj3D.rotation = [imageView myRotation];
