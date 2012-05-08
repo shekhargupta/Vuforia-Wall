@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-static NSString* notificationImagePickerFinished = @"ImagePickerFinishedNotification";
+static NSString* notificationImagePickerFinished = @"LibraryImagePickerFinishedNotification";
 static const int kVWallImageSize = 1024;
 
 

@@ -8,6 +8,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CameraViewController.h"
 
 @implementation AppDelegate
 
@@ -24,21 +25,22 @@
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 	
-	UIViewController *vc1, *vc2, *vc3;
+	UIViewController *vc1, *vc2, *vc3, *vc4;
 	
-	vc1 = [[ImagePickerViewController alloc] init];
-	vc2 = [[ImageWallViewController alloc] init];
+	vc1 = [[CameraViewController alloc] init];
+	vc2 = [[ImagePickerViewController alloc] init];
+	vc3 = [[ImageWallViewController alloc] init];
 #if !(TARGET_IPHONE_SIMULATOR)
-	vc3 = [[QCARViewController alloc] init];
+	vc4 = [[QCARViewController alloc] init];
 #endif
 	
 	self.tabBarController = [[UITabBarController alloc] init];
 	self.tabBarController.delegate = self;
 	
 #if !(TARGET_IPHONE_SIMULATOR)
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,vc3,nil];
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,vc3,vc4,nil];
 #else
-	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,nil];
+	self.tabBarController.viewControllers = [NSArray arrayWithObjects:vc1,vc2,vc3,nil];
 #endif
 	
 	self.window.rootViewController = self.tabBarController;
@@ -89,6 +91,9 @@
 	}
 	if ([viewController isKindOfClass:[ImagePickerViewController class]]) {
 		[(ImagePickerViewController*)viewController showPhotoLibrary];
+	}
+	if ([viewController isKindOfClass:[CameraViewController class]]) {
+		[(CameraViewController*)viewController showCamera];
 	}
 	return YES;
 }

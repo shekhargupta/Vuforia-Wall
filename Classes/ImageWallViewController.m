@@ -33,6 +33,7 @@
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionImageWallAddImage:) name:notificationImageWallAddImage object:nil];
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionImageWallRemoveImage:) name:notificationImageWallRemoveImage object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(actionImageWallSetTargetImage:) name:notificationImageWallSetTargetImage object:nil];
     }
     return self;
 }
@@ -79,6 +80,16 @@
 	
 	TouchImageView* imageView = notification.object;
 	[imageView removeFromSuperview];
+}
+
+- (void)actionImageWallSetTargetImage:(NSNotification*)notification;
+{
+	if (!notification.object) {
+		return;
+	}
+	
+	UIImage* image = notification.object;
+	targetImageView.image = image;
 }
 
 

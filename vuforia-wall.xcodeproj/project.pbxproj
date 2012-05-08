@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2EEEB215597E6900BA4164 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2EEEB115597E6900BA4164 /* CameraViewController.m */; };
+		5C2EEEB41559843E00BA4164 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2EEEB115597E6900BA4164 /* CameraViewController.m */; };
 		5C519A6C1537ECB00038E8E5 /* ImageWall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A6B1537ECB00038E8E5 /* ImageWall.m */; };
 		5C519A7A15384F2B0038E8E5 /* ImageWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */; };
 		5C519A7B15384F2B0038E8E5 /* ImageWallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */; };
@@ -102,6 +104,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C2EEEB015597E6900BA4164 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = Classes/CameraViewController.h; sourceTree = SOURCE_ROOT; };
+		5C2EEEB115597E6900BA4164 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = Classes/CameraViewController.m; sourceTree = SOURCE_ROOT; };
 		5C519A6A1537ECB00038E8E5 /* ImageWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageWall.h; sourceTree = "<group>"; };
 		5C519A6B1537ECB00038E8E5 /* ImageWall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageWall.m; sourceTree = "<group>"; };
 		5C519A7715384F2B0038E8E5 /* ImageWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageWallViewController.h; path = Classes/ImageWallViewController.h; sourceTree = SOURCE_ROOT; };
@@ -300,6 +304,8 @@
 		5CD9D2D21537AD9B00588B56 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5C2EEEB015597E6900BA4164 /* CameraViewController.h */,
+				5C2EEEB115597E6900BA4164 /* CameraViewController.m */,
 				5C519A7715384F2B0038E8E5 /* ImageWallViewController.h */,
 				5C519A7815384F2B0038E8E5 /* ImageWallViewController.m */,
 				5C519A7915384F2B0038E8E5 /* ImageWallViewController.xib */,
@@ -575,6 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2EEEB41559843E00BA4164 /* CameraViewController.m in Sources */,
 				5CBBD4A41542F1A800571FB8 /* UIImage+Resize.m in Sources */,
 				5CBBD4A51542F1A800571FB8 /* AppDelegate.m in Sources */,
 				5CBBD4A61542F1A800571FB8 /* main.m in Sources */,
@@ -611,6 +618,7 @@
 				5C8323E3153CA4CE00C0895D /* UIImage+Alpha.m in Sources */,
 				5C8323E5153CA4CE00C0895D /* UIImage+RoundedCorner.m in Sources */,
 				5CD3A4C2154E194D00308257 /* QCARViewController.mm in Sources */,
+				5C2EEEB215597E6900BA4164 /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

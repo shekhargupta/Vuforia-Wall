@@ -13,15 +13,18 @@
 
 static NSString* notificationImageWallAddImage = @"ImageWallAddImageNotification";
 static NSString* notificationImageWallRemoveImage = @"ImageWallRemoveImageNotification";
+static NSString* notificationImageWallSetTargetImage = @"ImageWallSetTargetImageNotification";
 
 
 @interface ImageWall : NSObject
 {
 	NSMutableArray* images;
+	UIImage* targetImage;
 	int selectedImage;
 	CGRect frame;
 }
 @property (nonatomic, retain) NSMutableArray* images;
+@property (nonatomic, retain) UIImage* targetImage;
 @property (nonatomic, assign) CGRect frame;
 @property (nonatomic, assign) int selectedImage;
 

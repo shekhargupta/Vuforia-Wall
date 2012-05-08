@@ -1,29 +1,29 @@
 //
-//  ImagePickerController.m
+//  CameraViewController.m
 //  vuforia-wall
 //
-//  Created by Eduard Feicho <eduard_DOT_feicho_AT_rwth-aachen_DOT_de> on 13.04.12.
-//  Source: https://github.com/Duffycola/Vuforia-Wall
-//  Copyright (c) 2012 Eduard Feicho. All rights reserved.
+//  Created by Edo on 08.05.12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "ImagePickerViewController.h"
+#import "CameraViewController.h"
 #import "UIImage+Resize.h"
 
-@implementation ImagePickerViewController
+@interface CameraViewController ()
+
+@end
+
+@implementation CameraViewController
 
 @synthesize imagePickerShown;
 
-
-
-#pragma mark - Constructors
 
 - (id)init;
 {
 	self = [super init];
     if (self) {
-		self.title = NSLocalizedString(@"Photo Library", @"Photo Library");
-		self.tabBarItem.image = [UIImage imageNamed:@"tabFolder"];
+		self.title = NSLocalizedString(@"Camera", @"Camera");
+		self.tabBarItem.image = [UIImage imageNamed:@"tabCamera"];
     }
     return self;
 }
@@ -33,27 +33,26 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		self.title = NSLocalizedString(@"Photo Library", @"Photo Library");
-		self.tabBarItem.image = [UIImage imageNamed:@"tabFolder"];
-		
+		self.title = NSLocalizedString(@"Camera", @"Camera");
+		self.tabBarItem.image = [UIImage imageNamed:@"tabCamera"];
     }
     return self;
 }
 
-- (IBAction)showPhotoLibrary
+- (IBAction)showCamera;
 {
 	if (imagePickerShown) {
 		return;
 	}
 	UIImagePickerController* imagePickerController = [[UIImagePickerController alloc] init];
 	imagePickerController.delegate = self;
-	imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+	imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
 	[self presentModalViewController:imagePickerController animated:YES];
 	imagePickerShown = YES;
-//	[imagePickerController release];
+	//	[imagePickerController release];
 }
 
-- (IBAction)hidePhotoLibrary;
+- (IBAction)hideCamera;
 {
 	if (!imagePickerShown) {
 		return;
@@ -84,30 +83,28 @@
 }
 
 
+
 #pragma mark - UIImagePickerControllerDelegate Methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	UIImage* image = [info objectForKey:UIImagePickerControllerOriginalImage];
-//	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(kVWallImageSize, kVWallImageSize) interpolationQuality:kCGInterpolationMedium];
-	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(kVWallImageSize-2,kVWallImageSize-2)];
-
+	//	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(kVWallImageSize, kVWallImageSize) interpolationQuality:kCGInterpolationMedium];
+	image = [image resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(kVWallTargetImageSize-2,kVWallTargetImageSize-2)];
+	
 	
 	NSLog(@"imagePickerController didFinish: image info [w,h] = [%f,%f]", image.size.width, image.size.height);
 	
 	
-	[[NSNotificationCenter defaultCenter] postNotificationName:notificationImagePickerFinished object:image];
+	[[NSNotificationCenter defaultCenter] postNotificationName:notificationCameraImagePickerFinished object:image];
 	
-	[self hidePhotoLibrary];
+	[self hideCamera];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-	[self hidePhotoLibrary];
+	[self hideCamera];
 }
-
-
-
 
 
 

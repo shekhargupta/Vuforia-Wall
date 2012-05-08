@@ -13,7 +13,7 @@
 
 @interface ImageWallViewController : UIViewController
 {
-	
+	IBOutlet UIImageView* targetImageView;
 }
 
 

@@ -8,7 +8,7 @@
 //
 
 #import "ImageWall.h"
-
+#import "CameraViewController.h"
 
 
 
@@ -27,6 +27,7 @@
 
 
 @synthesize images;
+@synthesize targetImage;
 @synthesize selectedImage;
 @synthesize frame;
 
@@ -42,8 +43,10 @@
 		if (!singleton) {
 			singleton = [[ImageWall alloc] init];
 			singleton.images = [[NSMutableArray alloc] initWithObjects:nil];
+			singleton.targetImage = [UIImage imageNamed:@"target.png"];
 			[[NSNotificationCenter defaultCenter] addObserver:singleton selector:@selector(actionImagePicked:) name:notificationImagePickerFinished object:nil];
 			[[NSNotificationCenter defaultCenter] addObserver:singleton selector:@selector(actionImageRemoved:) name:notificationTouchImageViewRemoved object:nil];
+			[[NSNotificationCenter defaultCenter] addObserver:singleton selector:@selector(actionImageWallSetTargetImage:) name:notificationCameraImagePickerFinished object:nil];
 		}
 		return singleton;
 	}
@@ -78,6 +81,16 @@
 	[self.images removeObject:touchImage];
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:notificationImageWallRemoveImage object:touchImage];
+}
+
+- (void)actionImageWallSetTargetImage:(NSNotification*)notification;
+{
+	if (!notification.object) {
+		return;
+	}
+	
+	self.targetImage = notification.object;
+	[[NSNotificationCenter defaultCenter] postNotificationName:notificationImageWallSetTargetImage object:self.targetImage];
 }
 
 
